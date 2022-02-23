@@ -17,6 +17,7 @@
 		A3D0028827C6F9360075F4E0 /* DateSafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0028727C6F9360075F4E0 /* DateSafeUITests.swift */; };
 		A3D0028A27C6F9360075F4E0 /* DateSafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0028927C6F9360075F4E0 /* DateSafeUITestsLaunchTests.swift */; };
 		A3D0029727C6F9DD0075F4E0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A3D0029627C6F9DD0075F4E0 /* .gitignore */; };
+		A3D0029927C7000F0075F4E0 /* locationtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0029827C7000F0075F4E0 /* locationtracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A3D0028727C6F9360075F4E0 /* DateSafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSafeUITests.swift; sourceTree = "<group>"; };
 		A3D0028927C6F9360075F4E0 /* DateSafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A3D0029627C6F9DD0075F4E0 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A3D0029827C7000F0075F4E0 /* locationtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationtracking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A3D0026F27C6F9360075F4E0 /* Assets.xcassets */,
 				A3D0027127C6F9360075F4E0 /* LaunchScreen.storyboard */,
 				A3D0027427C6F9360075F4E0 /* Info.plist */,
+				A3D0029827C7000F0075F4E0 /* locationtracking.swift */,
 			);
 			path = DateSafe;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D0026B27C6F9330075F4E0 /* ViewController.swift in Sources */,
+				A3D0029927C7000F0075F4E0 /* locationtracking.swift in Sources */,
 				A3D0026727C6F9330075F4E0 /* AppDelegate.swift in Sources */,
 				A3D0026927C6F9330075F4E0 /* SceneDelegate.swift in Sources */,
 			);
