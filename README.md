@@ -6,15 +6,25 @@ Jeein Kim (jeeinkim@csu.fullerton.edu)
 Wangmo Tenzing (wangmot@csu.fullerton.edu) 
 Nicholas Caro (nicholascaro@csu.fullerton.edu) 
 Minh Nguyen (minhnguyenandrew@csu.fullerton.edu)
+
 Background and motivation
 With the advent of online dating apps like Tinder and Hinge, meeting new people to go out on dates has become easier than ever. The problem here lies in that often times, people go out on dates with strangers whom they have absolutely no association to and may inadvertently be putting themselves in risky or dangerous scenarios, such as date rape and kidnapping. It is an unfortunate truth that at least several of us have either experienced risky dating scenarios firsthand or know someone else who has-- date-related harassment and violence is a persistent problem, especially among college students and young adults. 
-In a recent 2020 article from Propublica.org, the author summarizes that “Dating apps and the companies that own them talk a lot about caring about users’ safety. But when the users we talked to reported their attackers on platforms, they often heard nothing in return. And their attackers' profiles stayed active”. Companies like Bumble and Tinder have been criticized for their complacency in handling cases such as first-date rape on their online dating platforms. Although we have no power over the jurisdiction of big-name dating apps, we believe we can make a positive impact in the world of online dating by giving users a tool to help promote their safety on dates.
-To help mitigate the instances of such unfortunate events, our team has decided to build an app that people can utilize during dates to promote their personal safety and wellbeing. The DateSafe app hopes to promote a community of responsible, conscientious persons that are on the watchout for their own wellbeing and that of others. In the future, we hope to expand this app such that it can also be used for riders who feel uncomfortable during a ride with a Lyft or Uber driver, find themselves lost during a hike, feel endangered while traveling alone, etcetera. 
+In a recent 2020 article from Propublica.org, the author summarizes that “Dating apps and the companies that own them talk a lot about caring about users’ safety. 
+But when the users we talked to reported their attackers on platforms, they often heard nothing in return. And their attackers' profiles stayed active”. 
+Companies like Bumble and Tinder have been criticized for their complacency in handling cases such as first-date rape on their online dating platforms. 
+Although we have no power over the jurisdiction of big-name dating apps, we believe we can make a positive impact in the world of online dating by giving users a tool to help promote their safety on dates.
+To help mitigate the instances of such unfortunate events, our team has decided to build an app that people can utilize during dates to promote their personal safety and wellbeing. The DateSafe app hopes to promote a community of responsible, conscientious persons that are on the watchout for their own wellbeing and that of others. 
+In the future, we hope to expand this app such that it can also be used for riders who feel uncomfortable during a ride with a Lyft or Uber driver, find themselves lost during a hike, feel endangered while traveling alone, etcetera. 
+
 Our goal, mission, and hope is that the DateSafe app can bring a peace of mind to its users, knowing that they have support whenever they may need it. 
 
 
 Summary:
-No one wants their loved ones in danger and seeing the ones you love hurt is the worst. This app does everything to prevent that from happening. With the Date Safe app, when something seems amiss during a date or any interaction, the app pinpoints your location and in turn, the authorities will be notified. Given the time constraints, we will focus on implementing an Agile-like approach and keep the interface simple but functional; main features will include geolocation tracking, a button that allows you to alert others that you are in danger, and the ability to capture images of a potential threat. 
+No one wants their loved ones in danger and seeing the ones you love hurt is the worst. 
+This app does everything to prevent that from happening. 
+With the Date Safe app, when something seems amiss during a date or any interaction, the app pinpoints your location and in turn, the authorities will be notified. 
+Given the time constraints, we will focus on implementing an Agile-like approach and keep the interface simple but functional; main features will include geolocation tracking, a button that allows you to alert others that you are in danger, and the ability to capture images of a potential threat. 
+
 Features
 Emergency Button (Jeein Kim) - This app will feature a simple, readily accessible emergency button that immediately sends out a message to your friends, family, and the nearest PD.
 This feature will likely be the first shown upon opening the app, so that it is easy to click and alert your loved ones/officers that you are feeling endangered. We will not include a login/password authentication to maintain feasibility of access. Sample models to follow include apps like bSafe and FamilyLocator. 
