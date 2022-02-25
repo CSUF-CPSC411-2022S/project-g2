@@ -1,5 +1,4 @@
-# project-g2
-project-g2 created by GitHub Classroom
+# DateSafe App
 
 Authors:
 1. Jeein Kim (jeeinkim@csu.fullerton.edu) 
