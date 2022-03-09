@@ -16,7 +16,11 @@ struct ContentView: View {
         //Checking the state of the isPressed property for a toggle effect.
         //If button has not been pressed, do nothing. If the button has been pressed, show the new image.
         Button(action: { }, label: {
-            Image(!isPressed ? "test" : "alternative_test").resizable()
+            Image(!isPressed ? "alternative_test" : "test")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 380, height: 400, alignment: .center)
+                .clipShape(Circle())
         })
             .buttonStyle(PlainButtonStyle()) //remove default highlight
             .pressAction { //implementation of action from PressAction
