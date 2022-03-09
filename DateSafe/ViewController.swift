@@ -8,11 +8,12 @@
 import UIKit
 import SwiftUI
 
+//DateSafe Logo image overlay
 struct ImageOverlay: View {
     var body: some View {
         ZStack {
             Text("ds")
-                .font(.custom("Shelley", size: 70))
+                .font(.custom("Times New Roman", size: 70))
                 .padding(5)
                 .foregroundColor(.white)
         }.background(Color.pink)
@@ -21,18 +22,20 @@ struct ImageOverlay: View {
             .padding(5)
     }
 }
+
 struct ContentView: View {
-    //This is necessary to have our button image, for views depend on specified states and are set on a case by case basis.
     @State private var isPressed = false
+    @State private var displayPopup: Bool = false
     
     var body: some View {
-        //Checking the state of the isPressed property for a toggle effect.
         //If button has not been pressed, do nothing. If the button has been pressed, show the new image.
-        Button(action: { }, label: {
+        Button(action: {
+            /*DO STUFF HERE LATER*/
+        }, label: {
             Image(!isPressed ? "alternative_test" : "test")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 380, height: 400, alignment: .center)
+                .frame(width: 350, height: 400, alignment: .center)
                 .clipShape(Circle())
                 .overlay(ImageOverlay(), alignment: .center)
         })
@@ -46,21 +49,23 @@ struct ContentView: View {
     }
 }
 
+//Background Dark
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }
 
-//Press Actions for the Button
+//Press Actions
 struct PressActions: ViewModifier {
     var kPressed: () -> Void
     var kReleased: () -> Void
     func body(content: Content) -> some View {
         content
             .simultaneousGesture(
-                DragGesture(minimumDistance: 0)
+                //Ensure user doesn't accidentally click (must drag left or right)
+                DragGesture(minimumDistance: 1.5)
                     .onChanged({ _ in
                         kPressed()
                     })
@@ -86,20 +91,33 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //Will call Notifications and ContactOthers in here 
+    }
+    
+class Notifications {
+        var msg: String
         
-        //createButton()
+        init(_ msg: String) {
+            self.msg = msg
+        }
+        
+        func message()-> String {
+            return msg
+        }
     }
 
-//    func createButton() {
-//        let button = UIButton(type: .system)
-//        button.frame = CGRect(x:100, y:100, width:100, height:50)
-//        button.backgroundColor = .darkGray
-//        button.setTitle("Testing", for: .normal)
-//
-//        //button.addTarget(self, action: #selector(buttonAction),for: .touchUpInside)
-//
-//        self.view.addSubview(button)
-//
-//    }
+class ContactOthers : Notifications {
+        var person: String
+        
+        init(_ msg: String, to person: String) {
+            self.person = person
+            super.init(msg)
+        }
+        
+        override func message() -> String {
+            return msg
+        }
+}
+
 }
 
