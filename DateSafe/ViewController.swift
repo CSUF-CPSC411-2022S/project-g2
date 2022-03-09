@@ -8,6 +8,19 @@
 import UIKit
 import SwiftUI
 
+struct ImageOverlay: View {
+    var body: some View {
+        ZStack {
+            Text("ds")
+                .font(.custom("Shelley", size: 70))
+                .padding(5)
+                .foregroundColor(.white)
+        }.background(Color.pink)
+            .opacity(0.5)
+            .cornerRadius(20)
+            .padding(5)
+    }
+}
 struct ContentView: View {
     //This is necessary to have our button image, for views depend on specified states and are set on a case by case basis.
     @State private var isPressed = false
@@ -21,6 +34,7 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 380, height: 400, alignment: .center)
                 .clipShape(Circle())
+                .overlay(ImageOverlay(), alignment: .center)
         })
             .buttonStyle(PlainButtonStyle()) //remove default highlight
             .pressAction { //implementation of action from PressAction
