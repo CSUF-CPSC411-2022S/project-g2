@@ -15,6 +15,7 @@
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
 		A333B97A27DAA47300F22875 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B97927DAA47300F22875 /* LocationTracking.swift */; };
+		A333B97C27DAA7FF00F22875 /* LocationTrackingUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A333B97927DAA47300F22875 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
+		A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A086C09627D9B15300F06AAA /* DateSmarterTests.swift */,
+				A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */,
 			);
 			path = DateSmarterTests;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */,
+				A333B97C27DAA7FF00F22875 /* LocationTrackingUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
