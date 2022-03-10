@@ -14,6 +14,7 @@
 		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
+		A333B97A27DAA47300F22875 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B97927DAA47300F22875 /* LocationTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A086C09C27D9B15300F06AAA /* DateSmarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSmarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A333B97927DAA47300F22875 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
 				A086C08927D9B15300F06AAA /* Assets.xcassets */,
 				A086C08B27D9B15300F06AAA /* Preview Content */,
+				A333B97927DAA47300F22875 /* LocationTracking.swift */,
 			);
 			path = DateSmarter;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
+				A333B97A27DAA47300F22875 /* LocationTracking.swift in Sources */,
 				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
