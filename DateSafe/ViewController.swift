@@ -23,6 +23,7 @@ struct ImageOverlay: View {
     }
 }
 
+//Should I convert to a class?
 struct ContentView: View {
     @State private var isPressed = false
     @State private var displayPopup: Bool = false
@@ -40,7 +41,7 @@ struct ContentView: View {
                 .overlay(ImageOverlay(), alignment: .center)
         })
             .buttonStyle(PlainButtonStyle()) //remove default highlight
-            .pressAction { //implementation of action from PressAction
+            .pressAction { //Toggle effect
                 isPressed = true
             } kReleased: {
                 isPressed = false
@@ -91,7 +92,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //Will call Notifications and ContactOthers in here 
+        //Will call Notifications and ContactOthers in here
     }
     
 class Notifications {
