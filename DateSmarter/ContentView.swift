@@ -51,7 +51,7 @@ struct ContentView: View {
     }
     
     func sendMessage(){
-        let sms: String = "sms:+16266226475&body=This is a test."
+        let sms: String = "sms:+19095393310&body=I'm being followed please FaceTime. me. I am at <LocationFunction()>"
         
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
@@ -76,5 +76,6 @@ struct buttonStyle: ViewModifier {
            .clipShape(RoundedRectangle(cornerRadius: 14.0, style: .continuous))
    }
 }
+
 
 
