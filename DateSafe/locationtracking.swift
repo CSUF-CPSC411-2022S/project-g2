@@ -11,32 +11,25 @@ import SwiftUI
 
 //use LocationTracking() to call it from ContentView
 
-struct LocationTracking: View {
+struct LocationTracking {
     var latitude: Int = 45
     var longitude: Int = 100
     var coordinates: String = ""
     
-    //once our parts are connected, we will
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Text("Starting Location Tracking...\n")
-            } //HStack
-            HStack {
-                if latitude >= 30 && latitude <= 50 {
-                    if longitude >= 70 && longitude <= 120 {
-                        Text("📍Located detected")
-                    }
-                }
-            }//HStack
-        
-        } //VStack
+    func trackLocation (_ latitude: Int, at longitude: Int) {
+        if latitude >= 30 && latitude <= 50 {
+            if longitude >= 70 && longitude <= 120 {
+                print("📍Located detected in United States")
+            }
+        }
+        else {
+            print("Location is outside of United States")
+        }
     }
 }
 
-struct LocationTracking_Previews: PreviewProvider {
+/* struct LocationTracking_Previews: PreviewProvider {
     static var previews: some View {
         LocationTracking()
     }
-}
+} */

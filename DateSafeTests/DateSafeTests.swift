@@ -10,6 +10,18 @@ import XCTest
 
 class DateSafeTests: XCTestCase {
 
+    func testLocationTracking() {
+        let location = LocationTracking()
+        location.trackLocation(35, at: 110)
+        
+        XCTAssertEqual(location.latitude, 45)
+        XCTAssertEqual(location.longitude, 100)
+       
+        
+    }
+}
+    /*
+     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -33,4 +45,4 @@ class DateSafeTests: XCTestCase {
         }
     }
 
-}
+}*/
