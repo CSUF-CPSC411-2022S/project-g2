@@ -6,8 +6,12 @@
 //
 
 import XCTest
+@testable import DateSafe
+
 
 class DateSafeUITests: XCTestCase {
+
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -10,6 +10,7 @@ import XCTest
 
 class DateSafeTests: XCTestCase {
 
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,6 +19,35 @@ class DateSafeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    //This function tests if the user notification is not empty.
+    func testUserNotificationInitializedWithParameter() {
+        let notificationManager = Notifications("Hello")
+        XCTAssertNotNil(notificationManager)
+        }
+    
+    //This function tests if the notifications sent to others is not empty
+    func testInitializedNotificationsSentToOthers() {
+        let notificationManager = ContactOthers("Hello", to: "Random")
+        XCTAssertNotNil(notificationManager)
+    }
+    
+    //This function tests if the user notification is empty
+    func testUserNotificationInitializedWithoutParameter() {
+        let notificationManager = Notifications("")
+        XCTAssertNil(notificationManager)
+        }
+    
+    //This function tests if the notifications sent to others is empty and not sent to anyone
+    func testInitializedNotificationsNotSentToOthers() {
+        let notificationManager = ContactOthers("", to: "")
+        XCTAssertNil(notificationManager)
+    }
+    
+    
+    
+    
+            
+        
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

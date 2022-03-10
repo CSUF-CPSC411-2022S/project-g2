@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+
 //DateSafe Logo image overlay
 struct ImageOverlay: View {
     var body: some View {
@@ -23,7 +24,6 @@ struct ImageOverlay: View {
     }
 }
 
-//Should I convert to a class?
 struct ContentView: View {
     @State private var isPressed = false
     @State private var displayPopup: Bool = false
@@ -94,31 +94,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //Will call Notifications and ContactOthers in here
     }
-    
-class Notifications {
-        var msg: String
-        
-        init(_ msg: String) {
-            self.msg = msg
-        }
-        
-        func message()-> String {
-            return msg
-        }
-    }
-
-class ContactOthers : Notifications {
-        var person: String
-        
-        init(_ msg: String, to person: String) {
-            self.person = person
-            super.init(msg)
-        }
-        
-        override func message() -> String {
-            return msg
-        }
 }
 
-}
+
 
