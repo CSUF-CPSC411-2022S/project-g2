@@ -15,6 +15,12 @@
 		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
+		A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
+		A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8627E831AD0037F6AC /* inAppView.swift */; };
+		A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8927E832370037F6AC /* viewModifiers.swift */; };
+		A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8B27E8329F0037F6AC /* registerView.swift */; };
+		A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8D27E833030037F6AC /* nicksView.swift */; };
+		A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		A086C09C27D9B15300F06AAA /* DateSmarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSmarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A09EDB8127E8311F0037F6AC /* loggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingIn.swift; sourceTree = "<group>"; };
+		A09EDB8627E831AD0037F6AC /* inAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inAppView.swift; sourceTree = "<group>"; };
+		A09EDB8927E832370037F6AC /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
+		A09EDB8B27E8329F0037F6AC /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
+		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
+		A09EDB8F27E833C10037F6AC /* popInNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popInNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,9 @@
 			children = (
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
+				A09EDB8827E832170037F6AC /* View Modifiers */,
+				A09EDB8527E8318F0037F6AC /* views_Nick */,
+				A09EDB8327E8315C0037F6AC /* classes_Nick */,
 				7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */,
 				A086C08927D9B15300F06AAA /* Assets.xcassets */,
 				A086C08B27D9B15300F06AAA /* Preview Content */,
@@ -128,6 +143,33 @@
 				A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */,
 			);
 			path = DateSmarterUITests;
+			sourceTree = "<group>";
+		};
+		A09EDB8327E8315C0037F6AC /* classes_Nick */ = {
+			isa = PBXGroup;
+			children = (
+				A09EDB8127E8311F0037F6AC /* loggingIn.swift */,
+				A09EDB8F27E833C10037F6AC /* popInNotification.swift */,
+			);
+			path = classes_Nick;
+			sourceTree = "<group>";
+		};
+		A09EDB8527E8318F0037F6AC /* views_Nick */ = {
+			isa = PBXGroup;
+			children = (
+				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
+				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
+				A09EDB8D27E833030037F6AC /* nicksView.swift */,
+			);
+			name = views_Nick;
+			sourceTree = "<group>";
+		};
+		A09EDB8827E832170037F6AC /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A09EDB8927E832370037F6AC /* viewModifiers.swift */,
+			);
+			name = "View Modifiers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */,
+				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
+				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
 				7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */,
 				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
+				A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */,
+				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
+				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

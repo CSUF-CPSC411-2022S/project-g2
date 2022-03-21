@@ -8,54 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var NumberToMessage = ""
-    @State var Message = ""
-    
+    @StateObject var users = logIn()
+    @State var USERNAME = ""
+    @State var PASSWORD = ""
+    @State private var SWITCH = false
+    @State private var showingAlert = false
+
     
     var body: some View {
-        VStack{
-            HStack{
-                Spacer()
-                Button("Im on a bad date") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I feel trapped") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
-                
-            }
-            HStack{
-                Spacer()
-                Button("I'm being followed") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I've been drugged") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
-                
-            }
-//            TextField("Enter A Mobile Number: ", text: $NumberToMessage)
-//            TextField("Enter Your Message", text: $Message)
-            
-        }
-    }
-    
-    func sendMessage(){
-        let sms: String = "sms:+19095393310&body=I'm being followed please FaceTime. me. I am at <LocationFunction()>"
         
-        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        NavigationView{
+            VStack{
+                LOGO()
+                    .frame(width: 150, height: 150)
+               
+                TextField("USERNAME", text: $USERNAME)
+                    .modifier(textFields())
+                TextField("PASSWORD", text: $PASSWORD)
+                    .modifier(textFields())
+                Button("LOG IN") {
+                    if (users.checkUser(name: USERNAME, password: PASSWORD)){
+                        SWITCH = true;
+                    }else{
+                        showingAlert = true
+                    }
+                }
+                .alert("Username or password is invalid. Please try again.", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
+                .modifier(buttonMod())
+                
+                
+                NavigationLink(
+                    "User is Valid",
+                    destination: inAppView().navigationBarBackButtonHidden(true).navigationBarHidden(true),
+                    isActive: $SWITCH
+                    
+                )
+                .background(.white)
+                .foregroundColor(.white)
+                .disabled(true)
+                
+                
+                // insert navigation link to create an account
+                NavigationLink(
+                    "Register",
+                    destination: registerView().navigationBarBackButtonHidden(false).navigationBarHidden(false)
+                )
+            }
+                
+        }.environmentObject(users)
         
-        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
 }
 
@@ -67,62 +70,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct buttonStyle: ViewModifier {
-   func body(content: Content) -> some View {
-        content
-           .padding()
-           .accentColor(.white)
-           .background(Color.accentColor)
-           .clipShape(RoundedRectangle(cornerRadius: 14.0, style: .continuous))
-   }
+
+struct LOGO: View {
+    var body: some View{
+        return Image("DateSafeSmallBlack")
+        
+    }
 }
-
-
-
-/*
- struct ContentView: View {
-     var body: some View {
-         NavigationView {
-             GeometryReader { geometry in
-                 VStack {
-                     VStack {
-                         Text("Educational Modules")
-                             .modifier(TextModifier1())
-                         HStack {
-                             Text("Module 1: ")  //the text displayed
-                                 .modifier(TextModifier2())
-                             NavigationLink(destination: Module1Button()) {
-                                 Text(">>>")
-                                     .bold()
-                                     .modifier(ButtonDesign())
-                             }
-                         }.frame(height: geometry.size.height / 9)
-
-                         HStack {
-                             Text("Module 2: ")
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module2Button()) {
-                                 Text(">>>")
-                                     .bold()
-                                     .modifier(ButtonDesign())
-                             }
-                         }.frame(height: geometry.size.height / 9)
-
-                         HStack {
-                             Text("Module 3: ")
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module3Button()) {
-                                 Text(">>>")
-                                     .bold()
-                                     .modifier(ButtonDesign())
-                             }
-                         }.frame(height: geometry.size.height / 9)
-
-                     }
-                     Spacer()
-                 }
-             }
-         }
-     }
- }
-*/
