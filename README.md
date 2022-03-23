@@ -26,7 +26,7 @@ Given the time constraints, we will focus on implementing an Agile-like approach
 
 ### Features:
 1. Emergency Button (Jeein Kim) - This app will feature a simple, readily accessible emergency button that immediately sends out a message to your friends, family, and the nearest PD.
-This feature will likely be the first shown upon opening the app, so that it is easy to click and alert your loved ones/officers that you are feeling endangered. We will not include a login/password authentication to maintain feasibility of access. Sample models to follow include apps like bSafe and FamilyLocator. 
+This feature will likely be the first shown upon opening the app, so that it is easy to click and alert your loved ones/officers that you are feeling endangered. We will include an initial login/password authentication for the user but allow them to remain logged in after the fact to maintain feasibility of access. Sample models to follow include apps like bSafe and FamilyLocator. 
 
 2. Camera Feature (Nicholas Caro) - This feature will allow you to inconspicuously take photos of the person whom you are with, without showing a typical camera screen. The photos will be sent to your chosen list of emergency contacts. You may also customize the name of the app itself to make it less obvious that you are reaching out for help.
 This feature will likely take the form of another simple button that allows the user to take photos of a potential threat without being noticed. This feature will be similar to the emergency button feature in terms of style and orientation, and follow similar aforementioned models. The focus, again, is on user friendly, easy access to the safety features. 
