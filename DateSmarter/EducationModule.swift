@@ -10,20 +10,24 @@ import SwiftUI
 
 struct Module1Button: View {
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack {
-                Text("Module 1: [Insert title here]")
-                    .font(.headline)
+                Text(modOne.0)
+                    .font(.title)
+                Text(modOne.1)
+                    .font(.body)
             }
-        }
+//        }
     }
 }
 struct Module2Button: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Module 2: [Insert title here]")
-                    .font(.headline)
+                Text(modTwo.0)
+                    .font(.title)
+                Text(modTwo.1)
+                    .font(.body)
             }
         }
     }
@@ -32,8 +36,10 @@ struct Module3Button: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Module 3: [Insert title here]")
-                    .font(.headline)
+                Text(modThree.0)
+                    .font(.title)
+                Text(modThree.1)
+                    .font(.body)
             }
         }
     }

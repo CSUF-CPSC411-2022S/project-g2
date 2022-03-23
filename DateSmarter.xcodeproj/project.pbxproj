@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */; };
+		7A6A5CDE27DAA3C400EFF09F /* EducationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDD27DAA3C400EFF09F /* EducationModule.swift */; };
+		7A6A5CE027DAA6E300EFF09F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDF27DAA6E300EFF09F /* .gitignore */; };
+		7A6A5CE627EBC00C00EFF09F /* EducationModuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CE527EBC00C00EFF09F /* EducationModuleText.swift */; };
 		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
 		A086C08827D9B15100F06AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
@@ -35,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		7A6A5CDD27DAA3C400EFF09F /* EducationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationModule.swift; sourceTree = "<group>"; };
+		7A6A5CDF27DAA6E300EFF09F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7A6A5CE527EBC00C00EFF09F /* EducationModuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationModuleText.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C08527D9B15100F06AAA /* DateSmarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterApp.swift; sourceTree = "<group>"; };
 		A086C08727D9B15100F06AAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		A086C07927D9B15100F06AAA = {
 			isa = PBXGroup;
 			children = (
+				7A6A5CDF27DAA6E300EFF09F /* .gitignore */,
 				A086C08427D9B15100F06AAA /* DateSmarter */,
 				A086C09527D9B15300F06AAA /* DateSmarterTests */,
 				A086C09F27D9B15300F06AAA /* DateSmarterUITests */,
@@ -98,7 +103,8 @@
 			children = (
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
-				7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */,
+				7A6A5CDD27DAA3C400EFF09F /* EducationModule.swift */,
+				7A6A5CE527EBC00C00EFF09F /* EducationModuleText.swift */,
 				A086C08927D9B15300F06AAA /* Assets.xcassets */,
 				A086C08B27D9B15300F06AAA /* Preview Content */,
 			);
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A086C08D27D9B15300F06AAA /* Preview Assets.xcassets in Resources */,
+				7A6A5CE027DAA6E300EFF09F /* .gitignore in Resources */,
 				A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
-				7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */,
+				7A6A5CDE27DAA3C400EFF09F /* EducationModule.swift in Sources */,
 				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
+				7A6A5CE627EBC00C00EFF09F /* EducationModuleText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
