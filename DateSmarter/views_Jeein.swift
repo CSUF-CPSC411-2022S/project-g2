@@ -9,21 +9,6 @@
 import UIKit
 import SwiftUI
 
-//struct OnAppear: View {
-//    @State var greeting: String = "Welcome "
-//    var userName: String = "Paul"
-//    var body: some View {
-//        NavigationView {
-//            ScrollView {
-//                Text(greeting)
-//            }.onAppear(perform: {
-//                greeting = "Location data has been successfully captured."
-//            })
-//        }
-//    }
-//
-//
-//}
 //DateSafe Logo image overlay
 struct ImageOverlay: View {
     var body: some View {
