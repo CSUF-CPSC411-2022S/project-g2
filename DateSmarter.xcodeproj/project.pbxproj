@@ -89,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A5CDD27DAA3C400EFF09F /* minhsModifiers.swift */,
+				7A93FFD527ED0AE8002D527F /* minhsView.swift */,
+				7A93FFD727ED0B4E002D527F /* minhsEduText.swift */,
+			);
+			path = classes_views_Minh;
+			sourceTree = "<group>";
+		};
 		A086C07927D9B15100F06AAA = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +127,7 @@
 				A09EDB8827E832170037F6AC /* View Modifiers */,
 				A09EDB8527E8318F0037F6AC /* views_Nick */,
 				A09EDB8327E8315C0037F6AC /* classes_Nick */,
-				7A6A5CDD27DAA3C400EFF09F /* minhsModifiers.swift */,
-				7A93FFD527ED0AE8002D527F /* minhsView.swift */,
-				7A93FFD727ED0B4E002D527F /* minhsEduText.swift */,
+				7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */,
 				A086C08927D9B15300F06AAA /* Assets.xcassets */,
 				A086C08B27D9B15300F06AAA /* Preview Content */,
 			);
