@@ -9,6 +9,15 @@ import XCTest
 @testable import DateSmarter
 
 class DateSmarterTests: XCTestCase {
+    func testContactsEmptyInitializer() {
+        let contactsManager = Contacts("")
+        XCTAssertNil(contactsManager)
+    }
+    
+    func testAppendToEndOfContact(){
+        let myContact = Contacts("Jeein Kim")
+        myContact.append("Paul Inventado")
+        XCTAssertEqual(myContact.size, 2)
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,6 +40,9 @@ class DateSmarterTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+
     }
 
 }

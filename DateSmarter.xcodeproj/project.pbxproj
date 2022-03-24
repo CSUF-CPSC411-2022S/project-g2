@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		3BD2831727EADF5A000F175F /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2831627EADF5A000F175F /* views_Jeein.swift */; };
 		3BD2831B27EC3B5C000F175F /* contacts_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2831A27EC3B5C000F175F /* contacts_Jeein.swift */; };
+		3BD2831C27EC42E9000F175F /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */; };
 		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
 		A086C08827D9B15100F06AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
 		A086C08D27D9B15300F06AAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08C27D9B15300F06AAA /* Preview Assets.xcassets */; };
-		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
 		A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
@@ -116,6 +116,7 @@
 				3BD2831A27EC3B5C000F175F /* contacts_Jeein.swift */,
 				3BD2831627EADF5A000F175F /* views_Jeein.swift */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
+				A086C09627D9B15300F06AAA /* DateSmarterTests.swift */,
 				A09EDB8827E832170037F6AC /* View Modifiers */,
 				A09EDB8527E8318F0037F6AC /* views_Nick */,
 				A09EDB8327E8315C0037F6AC /* classes_Nick */,
@@ -137,7 +138,6 @@
 		A086C09527D9B15300F06AAA /* DateSmarterTests */ = {
 			isa = PBXGroup;
 			children = (
-				A086C09627D9B15300F06AAA /* DateSmarterTests.swift */,
 			);
 			path = DateSmarterTests;
 			sourceTree = "<group>";
@@ -308,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD2831C27EC42E9000F175F /* DateSmarterTests.swift in Sources */,
 				A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */,
 				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
 				3BD2831727EADF5A000F175F /* views_Jeein.swift in Sources */,
@@ -326,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
