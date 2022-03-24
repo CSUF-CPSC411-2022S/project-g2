@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */; };
+		A063B91327ED0B49002DB528 /* contacts_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B91227ED0B49002DB528 /* contacts_Jeein.swift */; };
+		A063B91527ED0BB8002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B91427ED0BB8002DB528 /* views_Jeein.swift */; };
 		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
 		A086C08827D9B15100F06AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		A063B91227ED0B49002DB528 /* contacts_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacts_Jeein.swift; sourceTree = "<group>"; };
+		A063B91427ED0BB8002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C08527D9B15100F06AAA /* DateSmarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterApp.swift; sourceTree = "<group>"; };
 		A086C08727D9B15100F06AAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
+				A063B91227ED0B49002DB528 /* contacts_Jeein.swift */,
+				A063B91427ED0BB8002DB528 /* views_Jeein.swift */,
 				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
 			);
@@ -302,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A063B91527ED0BB8002DB528 /* views_Jeein.swift in Sources */,
+				A063B91327ED0B49002DB528 /* contacts_Jeein.swift in Sources */,
 				A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */,
 				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
 				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,

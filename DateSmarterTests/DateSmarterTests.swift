@@ -36,5 +36,6 @@ class DateSmarterTests: XCTestCase {
         let obj = popUpNotif()
         XCTAssertEqual(obj.messageArray[0], "Try Again.")
     }
+    
 
 }
