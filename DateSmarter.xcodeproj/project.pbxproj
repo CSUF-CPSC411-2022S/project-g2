@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */; };
+		7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
+		7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
+		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
 		A063B91327ED0B49002DB528 /* contacts_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B91227ED0B49002DB528 /* contacts_Jeein.swift */; };
 		A063B91527ED0BB8002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B91427ED0BB8002DB528 /* views_Jeein.swift */; };
 		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
@@ -43,7 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		7AF1A41C27ED1187003710F0 /* minhsEduText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsEduText.swift; sourceTree = "<group>"; };
+		7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsModifiers.swift; sourceTree = "<group>"; };
+		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
 		A063B91227ED0B49002DB528 /* contacts_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacts_Jeein.swift; sourceTree = "<group>"; };
 		A063B91427ED0BB8002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,13 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A063B91827ED1211002DB528 /* views_Jeein */ = {
+		7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */ = {
 			isa = PBXGroup;
 			children = (
-				A063B91427ED0BB8002DB528 /* views_Jeein.swift */,
-				A063B91227ED0B49002DB528 /* contacts_Jeein.swift */,
+				7AF1A41C27ED1187003710F0 /* minhsEduText.swift */,
+				7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */,
+				7AF1A41E27ED1187003710F0 /* minhsView.swift */,
 			);
-			path = views_Jeein;
+			path = classes_views_Minh;
 			sourceTree = "<group>";
 		};
 		A086C07927D9B15100F06AAA = {
@@ -127,7 +132,7 @@
 				A063B91827ED1211002DB528 /* views_Jeein */,
 				A09EDB8527E8318F0037F6AC /* views_Nick */,
 				A09EDB8327E8315C0037F6AC /* classes_Nick */,
-				7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */,
+				7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */,
 				A086C08927D9B15300F06AAA /* Assets.xcassets */,
 				A086C08B27D9B15300F06AAA /* Preview Content */,
 			);
@@ -320,13 +325,15 @@
 				A063B91327ED0B49002DB528 /* contacts_Jeein.swift in Sources */,
 				A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */,
 				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
+				7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */,
 				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
-				7A6A5CDE27DAA3C400EFF09F /* Modifiers.swift in Sources */,
+				7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */,
 				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
 				A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */,
 				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
 				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
+				7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
