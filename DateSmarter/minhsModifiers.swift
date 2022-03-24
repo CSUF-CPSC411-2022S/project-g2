@@ -20,6 +20,7 @@ struct Module1Button: View {
         }
     }
 }
+
 struct Module2Button: View {
     var body: some View {
         NavigationView {
