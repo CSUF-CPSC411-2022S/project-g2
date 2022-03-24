@@ -15,7 +15,7 @@ struct inAppView: View {
                     Image(systemName: "newspaper.circle.fill")
                     Text("Minh's View")
                 }
-            Example()
+            JContentView()
                 .tabItem(){
                     Image(systemName: "megaphone.fill")
                     Text("Jeein's View")
