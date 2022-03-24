@@ -30,7 +30,6 @@ struct JContentView: View {
     var body: some View {
         Button(action: {
         //Call Location Function
-            //print("Location sent")
             scale += 1
         }, label: {
             //Text("Location sent")
