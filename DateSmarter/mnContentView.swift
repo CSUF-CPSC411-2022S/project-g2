@@ -7,7 +7,7 @@
 
 import SwiftUI
 
- struct ContentView: View {
+ struct mnContentView: View {
      var body: some View {
          NavigationView {
              GeometryReader { geometry in
