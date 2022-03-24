@@ -26,7 +26,6 @@ struct JContentView: View {
     @State private var isPressed = false
     @State private var displayPopup: Bool = false
     @State private var scale: CGFloat = 1
-
     var body: some View {
         Button(action: {
         //Call Location Function
