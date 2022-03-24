@@ -4,8 +4,6 @@
 //
 //  Created by Jeein Kim on 3/22/22.
 //
-
-
 import UIKit
 import SwiftUI
 
@@ -28,7 +26,6 @@ struct JContentView: View {
     @State private var isPressed = false
     @State private var displayPopup: Bool = false
     @State private var scale: CGFloat = 1
-
 
     var body: some View {
         Button(action: {
