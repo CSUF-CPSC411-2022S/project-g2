@@ -10,7 +10,7 @@ import SwiftUI
 struct inAppView: View {
     var body: some View {
         TabView{
-            Example()
+            minhsView()
                 .tabItem(){
                     Image(systemName: "newspaper.circle.fill")
                     Text("Minh's View")
