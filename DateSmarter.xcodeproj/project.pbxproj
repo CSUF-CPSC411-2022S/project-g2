@@ -89,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A063B91827ED1211002DB528 /* views_Jeein */ = {
+			isa = PBXGroup;
+			children = (
+				A063B91427ED0BB8002DB528 /* views_Jeein.swift */,
+				A063B91227ED0B49002DB528 /* contacts_Jeein.swift */,
+			);
+			path = views_Jeein;
+			sourceTree = "<group>";
+		};
 		A086C07927D9B15100F06AAA = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +124,7 @@
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
 				A09EDB8827E832170037F6AC /* View Modifiers */,
+				A063B91827ED1211002DB528 /* views_Jeein */,
 				A09EDB8527E8318F0037F6AC /* views_Nick */,
 				A09EDB8327E8315C0037F6AC /* classes_Nick */,
 				7A6A5CDD27DAA3C400EFF09F /* Modifiers.swift */,
@@ -162,8 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
-				A063B91227ED0B49002DB528 /* contacts_Jeein.swift */,
-				A063B91427ED0BB8002DB528 /* views_Jeein.swift */,
 				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
 			);

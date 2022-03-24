@@ -8,7 +8,7 @@ import Foundation
 import SwiftUI
 
 struct Contacts: View {
-    @State var people: [String] = ["Jeein Kim\n7144741825", "Nicholas Caro\n 9099366468", "Wango Tenzing\n2024761001", "Minh Nguyen\n5559087432"]
+    @State var people: [String] = ["Jeein Kim\n7144741825", "Nicholas Caro\n 9099366468", "Wango Tenzing\n2024761001", "Minh Nguyen\n5559087432"] // need to make this a data structure that can be passed to other views
     @State var others: [String] = ["Dr Paul Inventado\n7142039879", "Dr Anand Panangadan\n 7513339876"]
     @State var name: String = "Testing"
     var body: some View {
