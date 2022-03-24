@@ -10,14 +10,14 @@ import SwiftUI
 
 struct Module1Button: View {
     var body: some View {
-//        NavigationView {
+        NavigationView {
             VStack {
                 Text(modOne.0)
                     .font(.title)
                 Text(modOne.1)
                     .font(.body)
             }
-//        }
+        }
     }
 }
 struct Module2Button: View {
