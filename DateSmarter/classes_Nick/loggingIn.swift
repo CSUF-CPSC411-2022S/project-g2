@@ -7,7 +7,7 @@
 
 import Foundation
 class logIn: ObservableObject, Identifiable {
-    @Published var userDict: [String: String] = ["1":"1"] // dictionary to store user_name & password
+    @Published var userDict: [String: String] = ["Nicholas":"1234", "1":"1"] // dictionary to store user_name & password
     
     func inti(){
     }
