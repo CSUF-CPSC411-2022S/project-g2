@@ -16,7 +16,7 @@ struct nicksView: View {
         VStack{
             HStack{
                 Spacer()
-                Button("Im on a bad date") {
+                Button("I am on a bad date") {
                     sendMessage()
                 }
                 .modifier(DateSmarter.buttonStyle())
@@ -31,12 +31,12 @@ struct nicksView: View {
             }
             HStack{
                 Spacer()
-                Button("I'm being followed") {
+                Button("I am being followed") {
                     sendMessage()
                 }
                 .modifier(DateSmarter.buttonStyle())
                 Spacer()
-                Button("I've been drugged") {
+                Button("I have been drugged") {
                     sendMessage()
                 }
                 .modifier(DateSmarter.buttonStyle())

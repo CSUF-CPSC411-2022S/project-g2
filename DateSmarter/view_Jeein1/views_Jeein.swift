@@ -11,8 +11,8 @@ import SwiftUI
 struct ImageOverlay: View {
     var body: some View {
         ZStack {
-            Text("ds")
-                .font(.custom("Times New Roman", size: 70))
+            Text("")
+//                .font(.custom("Times New Roman", size: 70))
                 .padding(5)
                 .foregroundColor(.white)
         }.background(Color.pink)
@@ -32,7 +32,7 @@ struct JContentView: View {
             scale += 1
         }, label: {
             //Text("Location sent")
-            Image("test1")
+            Image("DateSafeSmallBlack")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 200, alignment: .center)

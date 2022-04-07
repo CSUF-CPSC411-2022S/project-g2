@@ -10,26 +10,27 @@ import SwiftUI
 struct inAppView: View {
     var body: some View {
         TabView{
-            minhsView()
-                .tabItem(){
-                    Image(systemName: "newspaper.circle.fill")
-                    Text("Minh's View")
-                }
             JContentView()
                 .tabItem(){
                     Image(systemName: "megaphone.fill")
-                    Text("Jeein's View")
+                    Text("Alert")
                 }
             nicksView()
                 .tabItem(){
                     Image(systemName: "exclamationmark.bubble.fill")
-                    Text("Nick's View")
+                    Text("Messages")
                 }
             Contacts()
                 .tabItem(){
                     Image(systemName: "book.closed.fill")
-                    Text("Contact's")
+                    Text("Contacts")
                 }
+            minhsView()
+                .tabItem(){
+                    Image(systemName: "newspaper.circle.fill")
+                    Text("Modules")
+                }
+
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
