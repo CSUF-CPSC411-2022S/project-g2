@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
+
 class logIn: ObservableObject, Identifiable {
     @Published var userDict: [String: String] = ["Nicholas":"1234"] // dictionary to store user_name & password
+    
+    
+    
+    
+    
     
     func inti(){
     }

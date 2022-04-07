@@ -12,6 +12,11 @@
 		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
 		A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92127ED14E0002DB528 /* contac_Jeein.swift */; };
 		A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92327ED1502002DB528 /* views_Jeein.swift */; };
+		A063B92627ED1BC3002DB528 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92527ED1BC3002DB528 /* Message.swift */; };
+		A063B92827ED20A5002DB528 /* messageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92727ED20A5002DB528 /* messageView.swift */; };
+		A079585F27FE6E4200337920 /* authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079585E27FE6E4200337920 /* authentication.swift */; };
+		A079586127FE7AB300337920 /* send_message_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586027FE7AB300337920 /* send_message_view.swift */; };
+		A079586327FE867D00337920 /* contactSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586227FE867D00337920 /* contactSelection.swift */; };
 		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
 		A086C08827D9B15100F06AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
@@ -50,6 +55,11 @@
 		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
 		A063B92127ED14E0002DB528 /* contac_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contac_Jeein.swift; sourceTree = "<group>"; };
 		A063B92327ED1502002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
+		A063B92527ED1BC3002DB528 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A063B92727ED20A5002DB528 /* messageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageView.swift; sourceTree = "<group>"; };
+		A079585E27FE6E4200337920 /* authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authentication.swift; sourceTree = "<group>"; };
+		A079586027FE7AB300337920 /* send_message_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = send_message_view.swift; sourceTree = "<group>"; };
+		A079586227FE867D00337920 /* contactSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactSelection.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C08527D9B15100F06AAA /* DateSmarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterApp.swift; sourceTree = "<group>"; };
 		A086C08727D9B15100F06AAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,8 +194,10 @@
 		A09EDB8327E8315C0037F6AC /* classes_Nick */ = {
 			isa = PBXGroup;
 			children = (
+				A063B92527ED1BC3002DB528 /* Message.swift */,
 				A09EDB8127E8311F0037F6AC /* loggingIn.swift */,
 				A09EDB8F27E833C10037F6AC /* popInNotification.swift */,
+				A079585E27FE6E4200337920 /* authentication.swift */,
 			);
 			path = classes_Nick;
 			sourceTree = "<group>";
@@ -194,8 +206,11 @@
 			isa = PBXGroup;
 			children = (
 				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
-				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
+				A079586027FE7AB300337920 /* send_message_view.swift */,
+				A079586227FE867D00337920 /* contactSelection.swift */,
+				A063B92727ED20A5002DB528 /* messageView.swift */,
+				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 			);
 			name = views_Nick;
 			sourceTree = "<group>";
@@ -342,6 +357,7 @@
 				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
 				7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */,
 				A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */,
+				A063B92827ED20A5002DB528 /* messageView.swift in Sources */,
 				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
 				7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */,
@@ -350,7 +366,11 @@
 				A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */,
 				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
 				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
+				A079586127FE7AB300337920 /* send_message_view.swift in Sources */,
 				7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */,
+				A063B92627ED1BC3002DB528 /* Message.swift in Sources */,
+				A079585F27FE6E4200337920 /* authentication.swift in Sources */,
+				A079586327FE867D00337920 /* contactSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

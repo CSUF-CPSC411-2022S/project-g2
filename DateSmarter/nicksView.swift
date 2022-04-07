@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct nicksView: View {
     @State var NumberToMessage = ""
@@ -14,39 +15,9 @@ struct nicksView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Button("Im on a bad date") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I feel trapped") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
-                
-            }
-            HStack{
-                Spacer()
-                Button("I'm being followed") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I've been drugged") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
-                
-            }
-//            TextField("Enter A Mobile Number: ", text: $NumberToMessage)
-//            TextField("Enter Your Message", text: $Message)
-            
+            contactSelection()
+            Divider()
+            send_message_view()
         }
     }
     
@@ -57,6 +28,10 @@ struct nicksView: View {
         
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
+    
+
+    
+
 }
 
 struct nicksView_Previews: PreviewProvider {
