@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A919EDE27FE7F990013B164 /* minhsEduTextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A919EDD27FE7F990013B164 /* minhsEduTextModifiers.swift */; };
 		7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
 		7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
 		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A919EDD27FE7F990013B164 /* minhsEduTextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minhsEduTextModifiers.swift; sourceTree = "<group>"; };
 		7AF1A41C27ED1187003710F0 /* minhsEduText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsEduText.swift; sourceTree = "<group>"; };
 		7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsModifiers.swift; sourceTree = "<group>"; };
 		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
@@ -96,9 +98,10 @@
 		7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */ = {
 			isa = PBXGroup;
 			children = (
-				7AF1A41C27ED1187003710F0 /* minhsEduText.swift */,
-				7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */,
 				7AF1A41E27ED1187003710F0 /* minhsView.swift */,
+				7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */,
+				7A919EDD27FE7F990013B164 /* minhsEduTextModifiers.swift */,
+				7AF1A41C27ED1187003710F0 /* minhsEduText.swift */,
 			);
 			path = classes_views_Minh;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */,
 				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
 				A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */,
+				7A919EDE27FE7F990013B164 /* minhsEduTextModifiers.swift in Sources */,
 				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
 				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
 				7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */,
