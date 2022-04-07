@@ -9,8 +9,8 @@ import SwiftUI
 
 struct registerView: View {
     // IMPORTANT: VIEW MUST BE RAN FROM THE LOGIN. WILL CRASH IF YOU RUN FROM HERE BECAUSE ENVIRONEMENT OBJECT IS ASSOCIATED WITH LOGIN VIEW
-        @State var USERNAME = ""
-        @State var PASSWORD = ""
+        @SceneStorage("USERNAME_") var USERNAME_ = "" // data persistence
+        @State var PASSWORD_ = "" 
     //    @State private var SWITCH = false
         @State private var showingAlert = false
         @State private var notif_Num = 0;
@@ -23,12 +23,12 @@ struct registerView: View {
                 Color.mint
                 VStack{
                     Text("Register Account View")
-                    TextField("Username", text: $USERNAME)
+                    TextField("Username", text: $USERNAME_)
                         .modifier(textFields())
-                    TextField("Password", text: $PASSWORD)
+                    TextField("Password", text: $PASSWORD_)
                         .modifier(textFields())
                     Button("Confirm") {
-                        if (users.addNewUser(name: USERNAME, password: PASSWORD)){ // if the user is added successfuly navigate to the homepage
+                        if (users.addNewUser(name: USERNAME_, password: PASSWORD_)){ // if the user is added successfuly navigate to the homepage
                             notif_Num = 1
                             showingAlert = true
                         } else {

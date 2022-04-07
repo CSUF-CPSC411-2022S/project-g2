@@ -43,8 +43,31 @@ struct buttonStyle: ViewModifier {
            .clipShape(RoundedRectangle(cornerRadius: 14.0, style: .continuous))
    }
 }
+struct button_mod: ViewModifier {
+   func body(content: Content) -> some View {
+        content
+           .frame(width: 320, height: 40)
+           .font(.headline)
+           .foregroundColor(Color.white)
+           .background(Color.teal)
+           .cornerRadius(15)
+           
+   }
+}
 
+struct LoginModifier: ViewModifier {
 
+var borderColor: Color = Color.gray
+
+func body(content: Content) -> some View {
+    content
+        .disableAutocorrection(true)
+        .autocapitalization(.none)
+        .textContentType(.password)
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(borderColor, lineWidth: 1))
+}
+}
 
 
 extension Color {

@@ -25,6 +25,11 @@ struct inAppView: View {
                     Image(systemName: "exclamationmark.bubble.fill")
                     Text("Nick's View")
                 }
+//            messageView()
+//                .tabItem(){
+//                    Image(systemName: "exclamationmark")
+//                    Text("Nicks Test View")
+//                }
             Contacts()
                 .tabItem(){
                     Image(systemName: "book.closed.fill")
