@@ -10,6 +10,8 @@
 		7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
 		7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
 		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
+		A011C19F2804F45A00950000 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
+		A0566EAA2804FD2900C62E4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */; };
 		A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92127ED14E0002DB528 /* contac_Jeein.swift */; };
 		A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92327ED1502002DB528 /* views_Jeein.swift */; };
 		A063B92627ED1BC3002DB528 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92527ED1BC3002DB528 /* Message.swift */; };
@@ -30,6 +32,7 @@
 		A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8B27E8329F0037F6AC /* registerView.swift */; };
 		A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8D27E833030037F6AC /* nicksView.swift */; };
 		A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
+		EBB348AD1DFD7248278F1C7F /* Pods_DateSmarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062F9D59CD409A06A576F07E /* Pods_DateSmarter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		062F9D59CD409A06A576F07E /* Pods_DateSmarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateSmarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2637D95DA0E7262F4F607085 /* Pods-DateSmarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSmarter.debug.xcconfig"; path = "Target Support Files/Pods-DateSmarter/Pods-DateSmarter.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF1A41C27ED1187003710F0 /* minhsEduText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsEduText.swift; sourceTree = "<group>"; };
 		7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsModifiers.swift; sourceTree = "<group>"; };
 		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
+		A011C19E2804F45A00950000 /* authenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authenticationView.swift; sourceTree = "<group>"; };
+		A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A063B92127ED14E0002DB528 /* contac_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contac_Jeein.swift; sourceTree = "<group>"; };
 		A063B92327ED1502002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
 		A063B92527ED1BC3002DB528 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		A09EDB8B27E8329F0037F6AC /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
 		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
 		A09EDB8F27E833C10037F6AC /* popInNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popInNotification.swift; sourceTree = "<group>"; };
+		E97FFA28EBD4020E91711011 /* Pods-DateSmarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSmarter.release.xcconfig"; path = "Target Support Files/Pods-DateSmarter/Pods-DateSmarter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB348AD1DFD7248278F1C7F /* Pods_DateSmarter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D2E07B774C7D6855AC8A58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2637D95DA0E7262F4F607085 /* Pods-DateSmarter.debug.xcconfig */,
+				E97FFA28EBD4020E91711011 /* Pods-DateSmarter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7AF1A41B27ED0D5C003710F0 /* classes_views_Minh */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +155,8 @@
 				A086C09F27D9B15300F06AAA /* DateSmarterUITests */,
 				A086C08327D9B15100F06AAA /* Products */,
 				A063B91A27ED131F002DB528 /* Recovered References */,
+				09D2E07B774C7D6855AC8A58 /* Pods */,
+				CADBE3E0C87ACDC245A2852E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +173,7 @@
 		A086C08427D9B15100F06AAA /* DateSmarter */ = {
 			isa = PBXGroup;
 			children = (
+				A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */,
 				A063B92027ED14C9002DB528 /* view_Jeein1 */,
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
@@ -211,6 +232,7 @@
 				A079586227FE867D00337920 /* contactSelection.swift */,
 				A063B92727ED20A5002DB528 /* messageView.swift */,
 				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
+				A011C19E2804F45A00950000 /* authenticationView.swift */,
 			);
 			name = views_Nick;
 			sourceTree = "<group>";
@@ -223,6 +245,14 @@
 			name = "View Modifiers";
 			sourceTree = "<group>";
 		};
+		CADBE3E0C87ACDC245A2852E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				062F9D59CD409A06A576F07E /* Pods_DateSmarter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A086C0A627D9B15300F06AAA /* Build configuration list for PBXNativeTarget "DateSmarter" */;
 			buildPhases = (
+				915D53B48A178D53634357FB /* [CP] Check Pods Manifest.lock */,
 				A086C07E27D9B15100F06AAA /* Sources */,
 				A086C07F27D9B15100F06AAA /* Frameworks */,
 				A086C08027D9B15100F06AAA /* Resources */,
+				109F27B3F3186C8011DAD2BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +361,7 @@
 			files = (
 				A086C08D27D9B15300F06AAA /* Preview Assets.xcassets in Resources */,
 				A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */,
+				A0566EAA2804FD2900C62E4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +380,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		109F27B3F3186C8011DAD2BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateSmarter/Pods-DateSmarter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DateSmarter/Pods-DateSmarter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DateSmarter/Pods-DateSmarter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		915D53B48A178D53634357FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DateSmarter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A086C07E27D9B15100F06AAA /* Sources */ = {
@@ -371,6 +446,7 @@
 				A063B92627ED1BC3002DB528 /* Message.swift in Sources */,
 				A079585F27FE6E4200337920 /* authentication.swift in Sources */,
 				A079586327FE867D00337920 /* contactSelection.swift in Sources */,
+				A011C19F2804F45A00950000 /* authenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +601,7 @@
 		};
 		A086C0A727D9B15300F06AAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2637D95DA0E7262F4F607085 /* Pods-DateSmarter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +631,7 @@
 		};
 		A086C0A827D9B15300F06AAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97FFA28EBD4020E91711011 /* Pods-DateSmarter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
