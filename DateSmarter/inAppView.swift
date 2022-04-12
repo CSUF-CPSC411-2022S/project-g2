@@ -18,12 +18,12 @@ struct inAppView: View {
             JContentView()
                 .tabItem(){
                     Image(systemName: "megaphone.fill")
-                    Text("Jeein's View")
+                    Text("SOS Button")
                 }
             nicksView()
                 .tabItem(){
                     Image(systemName: "exclamationmark.bubble.fill")
-                    Text("Nick's View")
+                    Text("Help Request")
                 }
 //            messageView()
 //                .tabItem(){
