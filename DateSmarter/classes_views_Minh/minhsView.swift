@@ -8,6 +8,8 @@
 import SwiftUI
 
  struct minhsView: View {
+     @State private var showWebView = false
+
      var body: some View {
          NavigationView {
 //             .navigationBarTitle("")
@@ -28,37 +30,47 @@ import SwiftUI
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             NavigationLink(destination: Module1Button()) {
+                             NavigationLink(destination: Module2Button()) {
                                  Text(modTwo.0)
                                      .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             NavigationLink(destination: Module1Button()) {
+                             NavigationLink(destination: Module3Button()) {
                                  Text(modThree.0)
                                      .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             NavigationLink(destination: Module1Button()) {
+                             NavigationLink(destination: Module4Button()) {
                                  Text("module 4")
                                      .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             NavigationLink(destination: Module1Button()) {
+                             NavigationLink(destination: Module5Button()) {
                                  Text("module 5")
                                      .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             NavigationLink(destination: Module1Button()) {
-                                 Text(modSix.0)
+//                             NavigationLink(destination: Module6Button()) {
+//                                 Text(modSix.0)
+//                                     .modifier(ContentBoxModifier())
+//                             }
+                             
+                             Button {
+                                 showWebView.toggle()
+                             } label: {
+                                 Text("List of Hotlines")
                                      .modifier(ContentBoxModifier())
+                             }
+                             .sheet(isPresented: $showWebView) {
+                                 Module6Button(url: URL(string: "https://www.pleaselive.org/hotlines/")!)
                              }
                          }.frame(height: geometry.size.height / 9)
                      }

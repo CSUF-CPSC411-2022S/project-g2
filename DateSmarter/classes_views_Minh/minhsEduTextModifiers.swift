@@ -6,6 +6,7 @@
 //
 import Foundation
 import SwiftUI
+import WebKit
 
 struct Module1Button: View {
     var body: some View {
@@ -158,14 +159,30 @@ struct Module5Button: View {
         }
     }
 }
-struct Module6Button: View {
-    @Environment(\.openURL) var openURL
-    var body: some View {
-        VStack {
-            Button("List of Hotlines") {
-                openURL(URL(string: "https://www.pleaselive.org/hotlines/")!)
-            }
-        }
-    }
+//struct Module6Button: View {
+//    @Environment(\.openURL) var openURL
+//    var body: some View {
+//        VStack {
+//            Button("List of Hotlines") {
+//                openURL(URL(string: "https://www.pleaselive.org/hotlines/")!)
+//            }
+//        }
+//    }
+//
+//}
 
+//source
+//https://www.appcoda.com/swiftui-wkwebview/
+struct Module6Button: UIViewRepresentable {
+ 
+    var url: URL
+ 
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+ 
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        let request = URLRequest(url: url)
+        webView.load(request)
+    }
 }
