@@ -17,61 +17,48 @@ import SwiftUI
                  VStack {
                      HStack {
                          Text("Educational Modules")
-                             .modifier(TextModifier1())
+                             .modifier(TitleTextModifier())
                      }.frame(height: geometry.size.height / 9)
                      ScrollView {
                          HStack {
-                             Text(modOne.0)  //the text displayed
-                                 .modifier(TextModifier2())
                              NavigationLink(destination: Module1Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
+                                 Text(modOne.0)
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             Text(modTwo.0)
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module2Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
-                                 
+                             NavigationLink(destination: Module1Button()) {
+                                 Text(modTwo.0)
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             Text(modThree.0)
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module3Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
+                             NavigationLink(destination: Module1Button()) {
+                                 Text(modThree.0)
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             Text("Module 4: ")
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module4Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
+                             NavigationLink(destination: Module1Button()) {
+                                 Text("module 4")
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             Text("Module 5: ")
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module5Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
+                             NavigationLink(destination: Module1Button()) {
+                                 Text("module 5")
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                          
                          HStack {
-                             Text(modSix.0)
-                             .modifier(TextModifier2())
-                             NavigationLink(destination: Module6Button()) {
-                                 Image(systemName: "arrow.turn.down.right")
-                                     .modifier(ButtonDesign())
+                             NavigationLink(destination: Module1Button()) {
+                                 Text(modSix.0)
+                                     .modifier(ContentBoxModifier())
                              }
                          }.frame(height: geometry.size.height / 9)
                      }
