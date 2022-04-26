@@ -8,7 +8,7 @@
 import Foundation
 
 //https://www.adt.com/resources/dating-safety-tips
-var modOne = ("Dating in College Safety Tips\n\n",
+var modOne = ("Dating in College Safety Tips\n",
               "    1. Let a trusted friend or family member know where you will be, who you will be with, and the time that you are estimated to return from your date. Be sure to call and check in with that person once you get home.\n",
               "    2. Learn self-defense techniques so that you are better prepared to protect yourself in case of an attack. Check to see if there are any free self-defense courses that are offered on your campus.\n",
               "    3. Know the locations and phone numbers of your local emergency stations so that you can quickly find help if you are in a dangerous situation.\n",

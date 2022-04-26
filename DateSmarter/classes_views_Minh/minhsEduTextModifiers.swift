@@ -9,6 +9,7 @@ import SwiftUI
 import WebKit
 
 struct Module1Button: View {
+    @State private var showWebView = false
     var body: some View {
 //        NavigationView {
 //            GeometryReader { geometry in
@@ -34,12 +35,22 @@ struct Module1Button: View {
                             .font(.body)
 //                    }.frame(height: geometry.size.height / 16)
                 }
+                Button {
+                    showWebView.toggle()
+                } label: {
+                    Text("Website Link")
+                        .modifier(ContentBoxModifier())
+                }
+                .sheet(isPresented: $showWebView) {
+                    Module6Button(url: URL(string: "https://www.adt.com/resources/dating-safety-tips")!)
+                }
             }
 //        }
     }
 }
 
 struct Module2Button: View {
+    @State private var showWebView = false
     var body: some View {
         ScrollView {
             VStack {
@@ -64,10 +75,20 @@ struct Module2Button: View {
                 Text(modTwo.9)
                     .font(.body)
             }
+            Button {
+                showWebView.toggle()
+            } label: {
+                Text("Website Link")
+                    .modifier(ContentBoxModifier())
+            }
+            .sheet(isPresented: $showWebView) {
+                Module6Button(url: URL(string: "https://www.new-hope.org/warning-signs-of-an-abusive-relationship/")!)
+            }
         }
     }
 }
 struct Module3Button: View {
+    @State private var showWebView = false
     var body: some View {
         ScrollView {
             VStack {
@@ -131,6 +152,15 @@ struct Module3Button: View {
                     Text(modThree.26)
                         .font(.body)
                 }
+            }
+            Button {
+                showWebView.toggle()
+            } label: {
+                Text("Website Link")
+                    .modifier(ContentBoxModifier())
+            }
+            .sheet(isPresented: $showWebView) {
+                Module6Button(url: URL(string: "https://www.new-hope.org/warning-signs-of-an-abusive-relationship/")!)
             }
         }
     }
