@@ -8,55 +8,58 @@
 import SwiftUI
 
 struct inAppView: View {
+ 
     var body: some View {
         TabView{
-            minhsView()
-                .tabItem(){
-                    Image(systemName: "newspaper.circle.fill")
-                    Text("Minh's View")
-                }
-            JContentView()
-                .tabItem(){
-                    Image(systemName: "megaphone.fill")
-                    Text("SOS Button")
-                }
+            //            minhsView()
+            //                .tabItem(){
+            //                    Image(systemName: "newspaper.circle.fill")
+            //                    Text("Minh's View")
+            //                }
+            //            JContentView()
+            //                .tabItem(){
+            //                    Image(systemName: "megaphone.fill")
+            //                    Text("SOS Button")
+            //                }
             nicksView()
                 .tabItem(){
                     Image(systemName: "exclamationmark.bubble.fill")
                     Text("Help Request")
                 }
-//            messageView()
-//                .tabItem(){
-//                    Image(systemName: "exclamationmark")
-//                    Text("Nicks Test View")
-//                }
             Contacts()
                 .tabItem(){
                     Image(systemName: "book.closed.fill")
                     Text("Contact's")
                 }
+//            signOut()
+//                .tabItem(){
+//                    Image(systemName: "book.closed.fill")
+//                    Text("Contact's")
+//                }
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarHidden(true)
+//            
+//            .navigationBarTitle("", displayMode: .inline)
+//            .edgesIgnoringSafeArea([.top, .bottom])
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-        
-        .navigationBarTitle("", displayMode: .inline)
-        .edgesIgnoringSafeArea([.top, .bottom])
     }
 }
-
 struct inAppView_Previews: PreviewProvider {
     static var previews: some View {
         inAppView()
     }
 }
 
-struct Example: View {
+struct signOut: View {
+    @EnvironmentObject var viewModel: AppViewModel
     var body: some View{
-        ZStack{
-            Color.mint
-            Text("Hello World ")
-            
-        }
-       
+        
+        Button(action: {
+            viewModel.signOut()
+        }, label: {
+            Text("Sign Out")
+                .foregroundColor(Color.red)
+        })
+        .environmentObject(viewModel)
     }
 }

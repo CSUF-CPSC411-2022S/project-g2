@@ -11,6 +11,10 @@
 		7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
 		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
 		A011C19F2804F45A00950000 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
+		A03BF3EE281CBC4A004D6F58 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3ED281CBC4A004D6F58 /* MailView.swift */; };
+		A03BF3F0281CCEE3004D6F58 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */; };
+		A03BF3F2281E28B6004D6F58 /* gridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3F1281E28B6004D6F58 /* gridView.swift */; };
+		A0437EEA281F8AE3009FE463 /* newGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0437EE9281F8AE3009FE463 /* newGridView.swift */; };
 		A0566EAA2804FD2900C62E4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */; };
 		A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92127ED14E0002DB528 /* contac_Jeein.swift */; };
 		A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92327ED1502002DB528 /* views_Jeein.swift */; };
@@ -59,6 +63,10 @@
 		7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsModifiers.swift; sourceTree = "<group>"; };
 		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
 		A011C19E2804F45A00950000 /* authenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authenticationView.swift; sourceTree = "<group>"; };
+		A03BF3ED281CBC4A004D6F58 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerView.swift; sourceTree = "<group>"; };
+		A03BF3F1281E28B6004D6F58 /* gridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridView.swift; sourceTree = "<group>"; };
+		A0437EE9281F8AE3009FE463 /* newGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newGridView.swift; sourceTree = "<group>"; };
 		A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A063B92127ED14E0002DB528 /* contac_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contac_Jeein.swift; sourceTree = "<group>"; };
 		A063B92327ED1502002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
@@ -174,9 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */,
+				A086C08727D9B15100F06AAA /* ContentView.swift */,
 				A063B92027ED14C9002DB528 /* view_Jeein1 */,
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
-				A086C08727D9B15100F06AAA /* ContentView.swift */,
 				A09EDB8827E832170037F6AC /* View Modifiers */,
 				A09EDB8527E8318F0037F6AC /* views_Nick */,
 				A09EDB8327E8315C0037F6AC /* classes_Nick */,
@@ -227,10 +235,14 @@
 			isa = PBXGroup;
 			children = (
 				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
+				A03BF3ED281CBC4A004D6F58 /* MailView.swift */,
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
+				A03BF3F1281E28B6004D6F58 /* gridView.swift */,
+				A0437EE9281F8AE3009FE463 /* newGridView.swift */,
 				A079586027FE7AB300337920 /* send_message_view.swift */,
 				A079586227FE867D00337920 /* contactSelection.swift */,
 				A063B92727ED20A5002DB528 /* messageView.swift */,
+				A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */,
 				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A011C19E2804F45A00950000 /* authenticationView.swift */,
 			);
@@ -434,6 +446,7 @@
 				A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */,
 				A063B92827ED20A5002DB528 /* messageView.swift in Sources */,
 				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,
+				A03BF3F0281CCEE3004D6F58 /* MessengerView.swift in Sources */,
 				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
 				7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */,
 				A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */,
@@ -442,8 +455,11 @@
 				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
 				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
 				A079586127FE7AB300337920 /* send_message_view.swift in Sources */,
+				A03BF3EE281CBC4A004D6F58 /* MailView.swift in Sources */,
+				A03BF3F2281E28B6004D6F58 /* gridView.swift in Sources */,
 				7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */,
 				A063B92627ED1BC3002DB528 /* Message.swift in Sources */,
+				A0437EEA281F8AE3009FE463 /* newGridView.swift in Sources */,
 				A079585F27FE6E4200337920 /* authentication.swift in Sources */,
 				A079586327FE867D00337920 /* contactSelection.swift in Sources */,
 				A011C19F2804F45A00950000 /* authenticationView.swift in Sources */,
@@ -622,7 +638,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fullerton.ecs.DateSmarter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DateSmarter;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -652,7 +668,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fullerton.ecs.DateSmarter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DateSmarter;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

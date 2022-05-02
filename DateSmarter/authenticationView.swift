@@ -59,10 +59,10 @@ struct authenticationView: View {
     @EnvironmentObject var viewModel: AppViewModel
     var body: some View {
         VStack{
-            Image("DateSafeSmallBlack")
+            Image("Date (1)")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150, height: 150)
+                .frame(width: 200, height: 200)
             VStack{
                 TextField("Email Address", text: $email)
                     .disableAutocorrection(true)
@@ -84,7 +84,7 @@ struct authenticationView: View {
                 .foregroundColor(Color.white)
                 .frame(width: 200, height: 50)
                 .cornerRadius(8)
-                .background(Color.blue)
+                .background(Color.red)
                 
                 NavigationLink("Create Account") {
                     signUpView()
@@ -95,7 +95,7 @@ struct authenticationView: View {
             
             Spacer()
         }
-        .navigationTitle("Sign In")
+//        .navigationTitle("Sign In")
         
     }
 }
@@ -107,10 +107,10 @@ struct signUpView: View {
     @EnvironmentObject var viewModel: AppViewModel
     var body: some View {
         VStack{
-            Image("DateSafeSmallBlack")
+            Image("Date (1)")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150, height: 150)
+                .frame(width: 200, height: 200)
             VStack{
                 TextField("Email Address", text: $email)
                     .disableAutocorrection(true)
@@ -133,7 +133,7 @@ struct signUpView: View {
                 .foregroundColor(Color.white)
                 .frame(width: 200, height: 50)
                 .cornerRadius(8)
-                .background(Color.blue)
+                .background(Color.red)
                 
                 
             }
