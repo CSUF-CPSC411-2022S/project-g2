@@ -8,6 +8,7 @@
 import SwiftUI
 
 class messageButton: Identifiable {
+    let id = UUID()
     var label: String
     var body: String
     var icon: Image
@@ -40,22 +41,24 @@ struct newGridView: View {
         ScrollView(.horizontal, showsIndicators: false){
             LazyHGrid(rows: newRows, spacing: 40){
                 ForEach(messageButtons){ item in
-                    Button(action: {},
-                           label: {
-                        VStack{
-                            item.icon
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            Text(item.label)
-                                .font(.body.bold())
-                        }
-                    })
-                    .padding()
-                    .frame(width: 120, height: 140)
                     
-                    .background(.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(20)
+                    newGridRow(item: item, items: $selectedItem)
+//                    Button(action: {},
+//                           label: {
+//                        VStack{
+//                            item.icon
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                            Text(item.label)
+//                                .font(.body.bold())
+//                        }
+//                    })
+//                    .padding()
+//                    .frame(width: 120, height: 140)
+//
+//                    .background(.red)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(20)
                 }
             }.navigationViewStyle(StackNavigationViewStyle())
         }
@@ -65,8 +68,33 @@ struct newGridView: View {
 }
 
 struct newGridRow: View {
+    let item: messageButton
+    
+    
+    @Binding var items: [messageButton]
+    
     var body: some View {
-        Text("Hello World")
+        Button(action : {
+            if items.contains(where: {$0.id == item.id}){
+                items.removeAll(where: {$0.id == item.id})
+            } else {
+                items.append(item)
+            }
+            
+        }, label: {
+            VStack{
+                item.icon
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text(item.label)
+                    .font(.body.bold())
+            }
+        })
+        .padding()
+        .frame(width: 120, height: 140)
+        .foregroundColor(.white)
+        .background(items.contains(where: {$0.id == item.id}) ? LinearGradient(gradient: Gradient(colors: [Color.red]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.black]), startPoint: .leading, endPoint: .trailing))
+        .cornerRadius(20)
     }
 }
 

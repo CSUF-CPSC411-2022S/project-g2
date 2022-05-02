@@ -27,7 +27,7 @@ struct nicksView: View {
             Form{
                 List{
                     // add footer to location sharing
-                    Section(header: Text("LOCATION SENDER"), footer: location ? Text("Location will be included in message body") : Text("Location will not be included in message body")){
+                    Section(header: Text("LOCATION SENDER"), footer: location ? Text("Location sender on.") : Text("Location sender off.")){
         //                Label("Share Current Location", systemImage: "location.circle")
         //                    .font(.title2)
         //                    .foregroundColor(location ? .red: .gray)
@@ -59,12 +59,18 @@ struct nicksView: View {
                             
                     })
                     
-                    Section(header: Text("YOUR SITUATION")){
+                    Section(header: Text("PICK ONE SITUATION")){
                         newGridView()
                         
                         
                     }
                     Button("Send Request") {
+                        // use array of selected contacts to make an array of phone numbers
+                        
+                        // asign the selected situation body as body of text message
+                        
+                        
+                        
                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                     }
                     

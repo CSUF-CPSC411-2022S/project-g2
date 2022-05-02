@@ -21,23 +21,11 @@ enum Items: String, CaseIterable, Equatable {
 
 
 struct gridView: View {
-    
-    
-//    @State var messageButtons = [
-//        messageButton(label: "On a Bad Date", body: "Can you please call me? I need to get out of this bad date", icon: "❌👨🏻‍❤️‍💋‍👨🏽" ),
-//        messageButton(label: "Being Followed", body: "Can you please call me? I need to get out of this bad date", icon: "👀" ),
-//        messageButton(label: "Feeling Trapped", body: "Can you please call me? I need to get out of this bad date", icon: "🪤" ),
-//        messageButton(label: "Drugged", body: "Can you please call me? I need to get out of this bad date", icon: "💊")
-//    ]
-    
-    
     var rows: [GridItem] {
         Array(repeating: .init(.fixed(120)), count: 1)
     }
     
     @State var selectedItems: [Items] = []
-    
-//    @State var selectedItem: [messageButton] = [] // array of type messageButton to store the selected GridItem
     
     var body: some View {
         
@@ -48,9 +36,6 @@ struct gridView: View {
                 }
             }  .navigationViewStyle(StackNavigationViewStyle())
         }
-        
-        
-        
     }
 }
 
@@ -77,14 +62,8 @@ struct GridRow: View {
         })
         .padding()
         .frame(width: 150, height: 100)
-   
         .background(items.contains(item) ? LinearGradient(gradient: Gradient(colors: [Color.red]), startPoint: .leading, endPoint: .trailing) : LinearGradient(gradient: Gradient(colors: [Color.gray]), startPoint: .leading, endPoint: .trailing))
         .cornerRadius(20)
-//        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-
-
-
-        
     }
 }
 struct gridView_Previews: PreviewProvider {
