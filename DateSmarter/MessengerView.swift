@@ -9,53 +9,83 @@ import SwiftUI
 import UIKit
 import MessageUI
 
-struct MessengerView:  UIViewControllerRepresentable{
-    
-    @Binding var isShowing: Bool
-    @Binding var result: Result<MessageComposeResult, Error>?
+protocol MessagessViewDelegate{
+    func messageCompletion(result: MessageComposeResult)
+}
 
-    
-    class Coordinator: NSObject, MFMessageComposeViewControllerDelegate {
-        
-        @Binding var isShowing: Bool
-        @Binding var result: Result<MessageComposeResult, Error>?
+class MessagesViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
-        
-        init(isShowing: Binding<Bool>,
-             result: Binding<Result<MessageComposeResult, Error>?>) {
-            _isShowing = isShowing
-            _result = result
-   
-        }
-        
-        func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-            defer {
-                isShowing = false
-            }
+    var delegate: MessagessViewDelegate?
+    var recipients: [String]?
+    var body: String?
 
-            self.result = .success(result)
-            controller.dismiss(animated: true, completion: nil)
-            
-            
-           
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    func displayMessageInterface(){
+        let composeVC = MFMessageComposeViewController()
+        composeVC.messageComposeDelegate = self
+
+
+        // Configure the fields of the interface
+        composeVC.recipients = self.recipients ?? []
+        composeVC.body = body ?? ""
+
+        // Present the view controller modally.
+
+        if MFMessageComposeViewController.canSendText(){
+            self.present(composeVC, animated: true, completion: nil)
+        } else {
+            self.delegate?.messageCompletion(result: MessageComposeResult.failed)
         }
     }
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true)
+        self.delegate?.messageCompletion(result: result)
+    }
+}
+
+struct MessageUIView: UIViewControllerRepresentable{
+    @Environment(\.presentationMode) var presentationMode
+
+    @Binding var recipients: [String]
+//    @Binding var body: String
+    @Binding var selectedGridItem: [messageButton]
     
+    var completion: ((_ result: MessageComposeResult) -> Void)
+
     func makeCoordinator() -> Coordinator {
-        return Coordinator(isShowing: $isShowing, result: $result)
+        Coordinator(self)
     }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MessengerView>) -> MFMessageComposeViewController {
-        let vc = MFMessageComposeViewController()
-        vc.recipients = ["4085551212"]
-        vc.body = "Hello from California!"
-        return vc
-    }
-    
-    func updateUIViewController(_ uiViewController: MFMessageComposeViewController,
-                                    context: UIViewControllerRepresentableContext<MessengerView>) {
 
+    func makeUIViewController(context: Context) ->  MessagesViewController {
+        let controller = MessagesViewController()
+        controller.delegate = context.coordinator
+        controller.recipients = recipients
+        controller.body = selectedGridItem[0].body
+        
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController:  MessagesViewController, context: Context) {
+        uiViewController.recipients = recipients
+        uiViewController.displayMessageInterface()
+    }
+
+    class Coordinator: NSObject, UINavigationControllerDelegate, MessagessViewDelegate {
+        var parent: MessageUIView
+
+        init(_ controller: MessageUIView){
+            self.parent = controller
         }
-    
+
+        func messageCompletion(result: MessageComposeResult) {
+            self.parent.presentationMode.wrappedValue.dismiss()
+            self.parent.completion(result)
+        }
+    }
 }
 

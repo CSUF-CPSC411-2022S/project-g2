@@ -9,10 +9,8 @@ import SwiftUI
 import MessageUI
 
 struct nicksView: View {
-    @State var NumberToMessage = ""
-    @State var Message = ""
+    @State private var isShowingMessages = false
     @State var location: Bool = false
-    
     @State var selectedContacts = [String]()
     @State var myContacts:[String:Int] = [
         "Nicholas Caro": 6266226475,
@@ -20,22 +18,27 @@ struct nicksView: View {
         "Jeein Kim": 6269054065,
         "Minh Nguyen": 9093216756
     ]
+    // create a state object
+    @StateObject var models = Model()
     
+    @State var selectedGridItem: [messageButton] = []
+    
+    var rows: [GridItem] {
+        Array(repeating: .init(.fixed(120)), count: 1)
+    }
+
     var body: some View {
-//        NavigationView{
         VStack{
             Form{
                 List{
                     // add footer to location sharing
-                    Section(header: Text("LOCATION SENDER"), footer: location ? Text("Location sender on.") : Text("Location sender off.")){
-        //                Label("Share Current Location", systemImage: "location.circle")
-        //                    .font(.title2)
-        //                    .foregroundColor(location ? .red: .gray)
+                    Section(header: Text("Location Sender"), footer: location ? Text("Location sender on.") : Text("Location sender off.")){
+                        
                         Toggle("location", isOn: $location)
                             .labelsHidden()
                             .tint(.red)
                     }
-                    Section("CHOOSE YOUR CONTACT", content: {
+                    Section("Choose Contacts", content: {
                         NavigationLink(destination: {
                             chooseItems(myContacts: myContacts, selectedContacts: $selectedContacts).navigationTitle("Contact Picker")
                         }, label: {
@@ -50,56 +53,88 @@ struct nicksView: View {
                     })
                     
                     // Display the contacts chosen
-                    Section("SELECTED CONTACT(S)", content: {
+                    Section("Selected Contacts", content: {
                         if (selectedContacts.count == 0){
                             Text("Nothing Selected Yet").font(.callout)
                         } else {
                             Text(selectedContacts.joined(separator: "\n"))
                         }
-                            
+                        
                     })
                     
-                    Section(header: Text("PICK ONE SITUATION")){
-                        newGridView()
-                        
-                        
-                    }
-                    Button("Send Request") {
-                        // use array of selected contacts to make an array of phone numbers
-                        
-                        // asign the selected situation body as body of text message
-                        
-                        
-                        
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    // Section that controls picking a situation
+                    Section(header: Text("Pick a Situation")){
+                        ScrollView(.horizontal, showsIndicators: false){
+                            LazyHGrid(rows: rows, spacing: 40){
+                                ForEach(models.responces){ item in
+                                    newGridRow(item: item, items: $selectedGridItem)
+                                }
+                            }.navigationViewStyle(StackNavigationViewStyle())
+                        }
                     }
                     
+                    // Button that opens iMessage UI
+                    Button {
+                        self.isShowingMessages.toggle()
+                    } label: {
+                        Text("Send Responce")
+                    }
+                    .sheet(isPresented: self.$isShowingMessages){
+                        MessageUIView(recipients: $selectedContacts, selectedGridItem: $selectedGridItem, completion: handleCompletion(_:))
+                    }
                     .foregroundColor(.red)
                     .font(.body.bold())
                     
                 }.navigationTitle("Help Request")
             }
-         
+            
         }
 
-    
-
-//        }
-      
-
+        
     }
     
-    func sendMessage(){
-        let sms: String = "sms:+19095393310&body=I'm being followed please FaceTime. me. I am at <LocationFunction()>"
-        
-        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    func load<T: Decodable>(_ filename: String) -> T {
+        let data: Data
+
+        guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+            else {
+                fatalError("Couldn't find \(filename) in main bundle.")
+        }
+
+        do {
+            data = try Data(contentsOf: file)
+        } catch {
+            fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+        }
+
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        }
     }
     
-
-    
-
+    func handleCompletion(_ result: MessageComposeResult){
+        switch result {
+        case .cancelled:
+            print("Cancle")
+        break
+            
+        case .sent:
+            print("Sent")
+        break
+            
+        case .failed:
+            print("failed")
+        break
+        
+        @unknown default:
+            print("unknown default")
+        break
+        }
+        
+    }
 }
 
 struct chooseItems: View {
@@ -163,10 +198,25 @@ struct MultiSelectPickerView: View {
                 }
             }
         }
+    } 
+}
+
+struct signOut: View {
+    @EnvironmentObject var viewModel: AppViewModel
+    var body: some View{
+        
+        Button(action: {
+            viewModel.signOut()
+        }, label: {
+            Text("Sign Out")
+                .foregroundColor(Color.red)
+        })
+        .environmentObject(viewModel)
     }
 }
+
 struct nicksView_Previews: PreviewProvider {
     static var previews: some View {
-        nicksView()
+        nicksView(models: Model())
     }
 }

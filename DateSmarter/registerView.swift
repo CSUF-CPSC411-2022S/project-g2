@@ -43,12 +43,6 @@ struct registerView: View {
                     
                 } // end of VStack
             }
-                
-            
-            
-            
-            
-            
         }
 }
 

@@ -7,35 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
-		7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
-		7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
-		A011C19F2804F45A00950000 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
-		A03BF3EE281CBC4A004D6F58 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3ED281CBC4A004D6F58 /* MailView.swift */; };
-		A03BF3F0281CCEE3004D6F58 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */; };
-		A03BF3F2281E28B6004D6F58 /* gridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3F1281E28B6004D6F58 /* gridView.swift */; };
-		A0437EEA281F8AE3009FE463 /* newGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0437EE9281F8AE3009FE463 /* newGridView.swift */; };
 		A0566EAA2804FD2900C62E4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */; };
-		A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92127ED14E0002DB528 /* contac_Jeein.swift */; };
-		A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92327ED1502002DB528 /* views_Jeein.swift */; };
-		A063B92627ED1BC3002DB528 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92527ED1BC3002DB528 /* Message.swift */; };
-		A063B92827ED20A5002DB528 /* messageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92727ED20A5002DB528 /* messageView.swift */; };
-		A079585F27FE6E4200337920 /* authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079585E27FE6E4200337920 /* authentication.swift */; };
-		A079586127FE7AB300337920 /* send_message_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586027FE7AB300337920 /* send_message_view.swift */; };
-		A079586327FE867D00337920 /* contactSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586227FE867D00337920 /* contactSelection.swift */; };
-		A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
-		A086C08827D9B15100F06AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
+		A073FD872822386200235529 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08727D9B15100F06AAA /* ContentView.swift */; };
+		A073FD882822386200235529 /* responcesData.json in Sources */ = {isa = PBXBuildFile; fileRef = A073FD8328221DE600235529 /* responcesData.json */; };
+		A073FD892822386200235529 /* contac_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92127ED14E0002DB528 /* contac_Jeein.swift */; };
+		A073FD8A2822386200235529 /* views_Jeein.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063B92327ED1502002DB528 /* views_Jeein.swift */; };
+		A073FD8B2822386200235529 /* DateSmarterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C08527D9B15100F06AAA /* DateSmarterApp.swift */; };
+		A073FD8C2822386200235529 /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8927E832370037F6AC /* viewModifiers.swift */; };
+		A073FD8D2822386200235529 /* nicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8D27E833030037F6AC /* nicksView.swift */; };
+		A073FD8E2822386200235529 /* newGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0437EE9281F8AE3009FE463 /* newGridView.swift */; };
+		A073FD8F2822386200235529 /* contactSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586227FE867D00337920 /* contactSelection.swift */; };
+		A073FD902822386200235529 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */; };
+		A073FD912822386200235529 /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8B27E8329F0037F6AC /* registerView.swift */; };
+		A073FD922822386200235529 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
+		A073FD932822386200235529 /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
+		A073FD942822386200235529 /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
+		A073FD952822386200235529 /* authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079585E27FE6E4200337920 /* authentication.swift */; };
+		A073FD962822386200235529 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
+		A073FD972822386200235529 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
+		A073FD982822386200235529 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
 		A086C08D27D9B15300F06AAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08C27D9B15300F06AAA /* Preview Assets.xcassets */; };
 		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
-		A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
-		A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8627E831AD0037F6AC /* inAppView.swift */; };
-		A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8927E832370037F6AC /* viewModifiers.swift */; };
-		A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8B27E8329F0037F6AC /* registerView.swift */; };
-		A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8D27E833030037F6AC /* nicksView.swift */; };
-		A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
 		EBB348AD1DFD7248278F1C7F /* Pods_DateSmarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062F9D59CD409A06A576F07E /* Pods_DateSmarter.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,17 +58,13 @@
 		7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsModifiers.swift; sourceTree = "<group>"; };
 		7AF1A41E27ED1187003710F0 /* minhsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = minhsView.swift; sourceTree = "<group>"; };
 		A011C19E2804F45A00950000 /* authenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authenticationView.swift; sourceTree = "<group>"; };
-		A03BF3ED281CBC4A004D6F58 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerView.swift; sourceTree = "<group>"; };
-		A03BF3F1281E28B6004D6F58 /* gridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridView.swift; sourceTree = "<group>"; };
 		A0437EE9281F8AE3009FE463 /* newGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newGridView.swift; sourceTree = "<group>"; };
 		A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A063B92127ED14E0002DB528 /* contac_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contac_Jeein.swift; sourceTree = "<group>"; };
 		A063B92327ED1502002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
-		A063B92527ED1BC3002DB528 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		A063B92727ED20A5002DB528 /* messageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageView.swift; sourceTree = "<group>"; };
+		A073FD8328221DE600235529 /* responcesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = responcesData.json; sourceTree = "<group>"; };
 		A079585E27FE6E4200337920 /* authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authentication.swift; sourceTree = "<group>"; };
-		A079586027FE7AB300337920 /* send_message_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = send_message_view.swift; sourceTree = "<group>"; };
 		A079586227FE867D00337920 /* contactSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactSelection.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C08527D9B15100F06AAA /* DateSmarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterApp.swift; sourceTree = "<group>"; };
@@ -86,7 +77,6 @@
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A09EDB8127E8311F0037F6AC /* loggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingIn.swift; sourceTree = "<group>"; };
-		A09EDB8627E831AD0037F6AC /* inAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inAppView.swift; sourceTree = "<group>"; };
 		A09EDB8927E832370037F6AC /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
 		A09EDB8B27E8329F0037F6AC /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
 		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
@@ -183,6 +173,7 @@
 			children = (
 				A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
+				A073FD8328221DE600235529 /* responcesData.json */,
 				A063B92027ED14C9002DB528 /* view_Jeein1 */,
 				A086C08527D9B15100F06AAA /* DateSmarterApp.swift */,
 				A09EDB8827E832170037F6AC /* View Modifiers */,
@@ -223,7 +214,6 @@
 		A09EDB8327E8315C0037F6AC /* classes_Nick */ = {
 			isa = PBXGroup;
 			children = (
-				A063B92527ED1BC3002DB528 /* Message.swift */,
 				A09EDB8127E8311F0037F6AC /* loggingIn.swift */,
 				A09EDB8F27E833C10037F6AC /* popInNotification.swift */,
 				A079585E27FE6E4200337920 /* authentication.swift */,
@@ -234,14 +224,9 @@
 		A09EDB8527E8318F0037F6AC /* views_Nick */ = {
 			isa = PBXGroup;
 			children = (
-				A09EDB8627E831AD0037F6AC /* inAppView.swift */,
-				A03BF3ED281CBC4A004D6F58 /* MailView.swift */,
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
-				A03BF3F1281E28B6004D6F58 /* gridView.swift */,
 				A0437EE9281F8AE3009FE463 /* newGridView.swift */,
-				A079586027FE7AB300337920 /* send_message_view.swift */,
 				A079586227FE867D00337920 /* contactSelection.swift */,
-				A063B92727ED20A5002DB528 /* messageView.swift */,
 				A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */,
 				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A011C19E2804F45A00950000 /* authenticationView.swift */,
@@ -273,10 +258,10 @@
 			buildConfigurationList = A086C0A627D9B15300F06AAA /* Build configuration list for PBXNativeTarget "DateSmarter" */;
 			buildPhases = (
 				915D53B48A178D53634357FB /* [CP] Check Pods Manifest.lock */,
-				A086C07E27D9B15100F06AAA /* Sources */,
 				A086C07F27D9B15100F06AAA /* Frameworks */,
 				A086C08027D9B15100F06AAA /* Resources */,
 				109F27B3F3186C8011DAD2BC /* [CP] Embed Pods Frameworks */,
+				A073FD852822385000235529 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -436,33 +421,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A086C07E27D9B15100F06AAA /* Sources */ = {
+		A073FD852822385000235529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A09EDB9027E833C10037F6AC /* popInNotification.swift in Sources */,
-				A09EDB8227E8311F0037F6AC /* loggingIn.swift in Sources */,
-				7AF1A42127ED1187003710F0 /* minhsView.swift in Sources */,
-				A063B92227ED14E0002DB528 /* contac_Jeein.swift in Sources */,
-				A063B92827ED20A5002DB528 /* messageView.swift in Sources */,
-				A09EDB8A27E832370037F6AC /* viewModifiers.swift in Sources */,
-				A03BF3F0281CCEE3004D6F58 /* MessengerView.swift in Sources */,
-				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
-				7AF1A42027ED1187003710F0 /* minhsModifiers.swift in Sources */,
-				A063B92427ED1502002DB528 /* views_Jeein.swift in Sources */,
-				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
-				A09EDB8E27E833030037F6AC /* nicksView.swift in Sources */,
-				A09EDB8C27E8329F0037F6AC /* registerView.swift in Sources */,
-				A09EDB8727E831AD0037F6AC /* inAppView.swift in Sources */,
-				A079586127FE7AB300337920 /* send_message_view.swift in Sources */,
-				A03BF3EE281CBC4A004D6F58 /* MailView.swift in Sources */,
-				A03BF3F2281E28B6004D6F58 /* gridView.swift in Sources */,
-				7AF1A41F27ED1187003710F0 /* minhsEduText.swift in Sources */,
-				A063B92627ED1BC3002DB528 /* Message.swift in Sources */,
-				A0437EEA281F8AE3009FE463 /* newGridView.swift in Sources */,
-				A079585F27FE6E4200337920 /* authentication.swift in Sources */,
-				A079586327FE867D00337920 /* contactSelection.swift in Sources */,
-				A011C19F2804F45A00950000 /* authenticationView.swift in Sources */,
+				A073FD872822386200235529 /* ContentView.swift in Sources */,
+				A073FD882822386200235529 /* responcesData.json in Sources */,
+				A073FD892822386200235529 /* contac_Jeein.swift in Sources */,
+				A073FD8A2822386200235529 /* views_Jeein.swift in Sources */,
+				A073FD8B2822386200235529 /* DateSmarterApp.swift in Sources */,
+				A073FD8C2822386200235529 /* viewModifiers.swift in Sources */,
+				A073FD8D2822386200235529 /* nicksView.swift in Sources */,
+				A073FD8E2822386200235529 /* newGridView.swift in Sources */,
+				A073FD8F2822386200235529 /* contactSelection.swift in Sources */,
+				A073FD902822386200235529 /* MessengerView.swift in Sources */,
+				A073FD912822386200235529 /* registerView.swift in Sources */,
+				A073FD922822386200235529 /* authenticationView.swift in Sources */,
+				A073FD932822386200235529 /* loggingIn.swift in Sources */,
+				A073FD942822386200235529 /* popInNotification.swift in Sources */,
+				A073FD952822386200235529 /* authentication.swift in Sources */,
+				A073FD962822386200235529 /* minhsEduText.swift in Sources */,
+				A073FD972822386200235529 /* minhsModifiers.swift in Sources */,
+				A073FD982822386200235529 /* minhsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

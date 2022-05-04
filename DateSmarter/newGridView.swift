@@ -7,69 +7,59 @@
 
 import SwiftUI
 
-class messageButton: Identifiable {
-    let id = UUID()
+struct messageButton: Decodable, Identifiable{
+    private(set) var id = UUID()
     var label: String
     var body: String
-    var icon: Image
-//    Image(systemName: "exclamationmark.bubble.fill")
-    
-    init(label: String, body: String, icon: Image){
+    var icon: String
+
+    init(label: String, body: String, icon: String){
         self.label = label
         self.body = body
         self.icon = icon
     }
-    
-    
 }
 
-struct newGridView: View {
-    @State var messageButtons = [
-        messageButton(label: "On a Bad Date", body: "Can you please call me? I need to get out of this bad date", icon: Image(systemName: "person.2.circle") ),
-        messageButton(label: "Being Followed", body: "I am being followed. Please call me ASAP.", icon: Image(systemName: "eye.circle") ),
-        messageButton(label: "Feeling \n Trapped", body: "I am with someone that is making feel trapped. Please call me.", icon: Image(systemName: "dot.square") ),
-        messageButton(label: "Drugged \n", body: "I think I was drugged. Please call me. ", icon: Image(systemName: "pills.circle"))
-    ]
+class Model: ObservableObject{
+    @Published var responces = [messageButton]() // array of messageButton objects
+    @Published var selectedItemOne: [messageButton] // array to old selected responce boxes
     
-    @State var selectedItem: [messageButton] = [] // array of type messageButton to store the selected GridItem
-    
-    var newRows: [GridItem] {
-        Array(repeating: .init(.fixed(120)), count: 1)
-    }
-    
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false){
-            LazyHGrid(rows: newRows, spacing: 40){
-                ForEach(messageButtons){ item in
-                    
-                    newGridRow(item: item, items: $selectedItem)
-//                    Button(action: {},
-//                           label: {
-//                        VStack{
-//                            item.icon
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                            Text(item.label)
-//                                .font(.body.bold())
-//                        }
-//                    })
-//                    .padding()
-//                    .frame(width: 120, height: 140)
-//
-//                    .background(.red)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(20)
-                }
-            }.navigationViewStyle(StackNavigationViewStyle())
-        }
+    init(){
         
         
+        // json way
+//         self.responces = load("responcesData.json") gives an error
+        self.responces =  [
+            messageButton(label: "On a Bad Date", body: "Can you please call me? I need to get out of this bad date", icon: "person.2.circle" ),
+            messageButton(label: "Being Followed", body: "I am being followed. Please call me ASAP.", icon: "eye.circle" ),
+            messageButton(label: "Feeling \n Trapped", body: "I am with someone that is making feel trapped. Please call me.", icon: "dot.square"),
+            messageButton(label: "Drugged \n", body: "I think I was drugged. Please call me. ", icon: "pills.circle")
+        ]
+        self.selectedItemOne = [
+            ]
+//        loadData()
+        
     }
+    
+    func loadData()  {
+           guard let url = Bundle.main.url(forResource: "responcesData", withExtension: "json")
+               else {
+                   print("Json file not found")
+                   return
+               }
+           
+           let data = try? Data(contentsOf: url)
+           let responces  = try? JSONDecoder().decode([messageButton].self, from: data!)
+           self.responces = responces!
+        print(self.responces)
+           
+       }
+    
+
 }
 
 struct newGridRow: View {
     let item: messageButton
-    
     
     @Binding var items: [messageButton]
     
@@ -79,11 +69,12 @@ struct newGridRow: View {
                 items.removeAll(where: {$0.id == item.id})
             } else {
                 items.append(item)
+                print(items)
             }
             
         }, label: {
             VStack{
-                item.icon
+                Image(systemName: item.icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                 Text(item.label)
@@ -98,8 +89,6 @@ struct newGridRow: View {
     }
 }
 
-struct newGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        newGridView()
-    }
-}
+
+
+

@@ -10,8 +10,8 @@ import MessageUI
 
 struct ContentView: View {
     
-    @State var result: Result<MessageComposeResult, Error>? = nil
-    @State var isShowingMailView = false
+//    @State var result: Result<MessageComposeResult, Error>? = nil
+//    @State var isShowingMailView = false
     
     @EnvironmentObject var viewModel: AppViewModel
     init(){
@@ -22,7 +22,7 @@ struct ContentView: View {
         TabView{
             if viewModel.signedIn {
                 NavigationView{
-                    nicksView()
+                    nicksView(models: Model())
                 }
                 .tabItem(){
                     Image(systemName: "exclamationmark.bubble.fill")
@@ -42,7 +42,7 @@ struct ContentView: View {
                 }
                 .tabItem(){
                     Image(systemName: "exclamationmark.bubble.fill")
-                    Text("Sign Out")
+                    Text("Contacts")
                 }
             }
             else {
@@ -57,6 +57,8 @@ struct ContentView: View {
         }
         
     }
+    
+    
 }
 
 
