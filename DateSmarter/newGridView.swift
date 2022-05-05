@@ -42,7 +42,7 @@ class Model: ObservableObject{
     }
     
     func loadData()  {
-           guard let url = Bundle.main.url(forResource: "responcesData", withExtension: "json")
+           guard let url = Bundle.main.url(forResource: "responcesData.json", withExtension: nil)
                else {
                    print("Json file not found")
                    return

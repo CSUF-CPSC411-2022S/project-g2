@@ -18,7 +18,6 @@
 		A073FD8E2822386200235529 /* newGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0437EE9281F8AE3009FE463 /* newGridView.swift */; };
 		A073FD8F2822386200235529 /* contactSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586227FE867D00337920 /* contactSelection.swift */; };
 		A073FD902822386200235529 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */; };
-		A073FD912822386200235529 /* registerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8B27E8329F0037F6AC /* registerView.swift */; };
 		A073FD922822386200235529 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
 		A073FD932822386200235529 /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
 		A073FD942822386200235529 /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
@@ -78,7 +77,6 @@
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A09EDB8127E8311F0037F6AC /* loggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingIn.swift; sourceTree = "<group>"; };
 		A09EDB8927E832370037F6AC /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
-		A09EDB8B27E8329F0037F6AC /* registerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerView.swift; sourceTree = "<group>"; };
 		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
 		A09EDB8F27E833C10037F6AC /* popInNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popInNotification.swift; sourceTree = "<group>"; };
 		E97FFA28EBD4020E91711011 /* Pods-DateSmarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSmarter.release.xcconfig"; path = "Target Support Files/Pods-DateSmarter/Pods-DateSmarter.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 				A0437EE9281F8AE3009FE463 /* newGridView.swift */,
 				A079586227FE867D00337920 /* contactSelection.swift */,
 				A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */,
-				A09EDB8B27E8329F0037F6AC /* registerView.swift */,
 				A011C19E2804F45A00950000 /* authenticationView.swift */,
 			);
 			name = views_Nick;
@@ -435,7 +432,6 @@
 				A073FD8E2822386200235529 /* newGridView.swift in Sources */,
 				A073FD8F2822386200235529 /* contactSelection.swift in Sources */,
 				A073FD902822386200235529 /* MessengerView.swift in Sources */,
-				A073FD912822386200235529 /* registerView.swift in Sources */,
 				A073FD922822386200235529 /* authenticationView.swift in Sources */,
 				A073FD932822386200235529 /* loggingIn.swift in Sources */,
 				A073FD942822386200235529 /* popInNotification.swift in Sources */,
