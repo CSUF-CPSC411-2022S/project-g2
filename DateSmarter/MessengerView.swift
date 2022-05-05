@@ -55,6 +55,9 @@ struct MessageUIView: UIViewControllerRepresentable{
     @Binding var selectedGridItem: [messageButton]
     @Binding var selectedContactDict: [String:String]
     
+    @State var searchString: String = ""
+    @EnvironmentObject var finder: LocationTracking
+    
     var completion: ((_ result: MessageComposeResult) -> Void)
 
     func makeCoordinator() -> Coordinator {
@@ -74,6 +77,7 @@ struct MessageUIView: UIViewControllerRepresentable{
             controller.body = selectedGridItem[0].body
         } else { // get location from API and concatinate it to message body
             print(location)
+            finder.find(searchString)
             controller.body = test_string
         }
         
