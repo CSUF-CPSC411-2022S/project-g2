@@ -14,7 +14,6 @@ class AppViewModel: ObservableObject {
     
     let auth = Auth.auth()
     @Published var signedIn = false
-    
     var isSignedIn: Bool {
         return auth.currentUser != nil
     }
@@ -22,6 +21,7 @@ class AppViewModel: ObservableObject {
         auth.signIn(withEmail: email, password: password){ [weak self]
             result, error in
             guard result != nil, error == nil else {
+                
                 return
             }
             // Success
@@ -55,6 +55,7 @@ class AppViewModel: ObservableObject {
 struct authenticationView: View {
     @State var email = ""
     @State var password = ""
+    @State private var showingAlert = false
     
     @EnvironmentObject var viewModel: AppViewModel
     var body: some View {
@@ -76,6 +77,7 @@ struct authenticationView: View {
                     .background(Color(.secondarySystemBackground))
                 Button("Sign In") {
                     guard !email.isEmpty, !password.isEmpty else {
+                        showingAlert = true
                         return
                     }
                     
@@ -85,6 +87,9 @@ struct authenticationView: View {
                 .frame(width: 200, height: 50)
                 .cornerRadius(8)
                 .background(Color.red)
+                .alert("Enter email and password", isPresented: $showingAlert) {
+                            Button("OK", role: .cancel) { }
+                        }
                 
                 NavigationLink("Create Account") {
                     signUpView()

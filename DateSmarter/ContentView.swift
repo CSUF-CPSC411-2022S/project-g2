@@ -17,33 +17,27 @@ struct ContentView: View {
     init(){
         UINavigationBar.setAnimationsEnabled(true)
     }
-    
+    @State private var selection = 0
     var body: some View {
-        TabView{
+        
+        TabView(selection: $selection){
             if viewModel.signedIn {
                 NavigationView{
                     nicksView(models: Model())
                 }
                 .tabItem(){
-                    Image(systemName: "exclamationmark.bubble.fill")
+                    Image(systemName: "message.circle.fill")
                     Text("Help Request")
                 }
-                
+                .tag(0)
                 NavigationView{
-                    signOut()
+                    minhsView()
                 }
                 .tabItem(){
-                    Image(systemName: "exclamationmark.bubble.fill")
-                    Text("Sign Out")
+                    Image(systemName: "newspaper.circle.fill").imageScale(.large)
+                    Text("Saftey Tips")
                 }
-                
-                NavigationView{
-                    Contacts()
-                }
-                .tabItem(){
-                    Image(systemName: "exclamationmark.bubble.fill")
-                    Text("Contacts")
-                }
+                .tag(1)
             }
             else {
                 NavigationView{

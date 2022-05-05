@@ -12,6 +12,7 @@ struct nicksView: View {
     @State private var isShowingMessages = false
     @State var location: Bool = false
     @State var selectedContacts = [String]()
+    @State var selectedContactsDict = [String: String]()
     @State var myContacts:[String:Int] = [
         "Nicholas Caro": 6266226475,
         "Wangmo Tezin": 9093784523,
@@ -22,6 +23,8 @@ struct nicksView: View {
     @StateObject var models = Model()
     
     @State var selectedGridItem: [messageButton] = []
+    
+    @EnvironmentObject var viewModel: AppViewModel
     
     var rows: [GridItem] {
         Array(repeating: .init(.fixed(120)), count: 1)
@@ -40,12 +43,12 @@ struct nicksView: View {
                     }
                     Section("Choose Contacts", content: {
                         NavigationLink(destination: {
-                            chooseItems(myContacts: myContacts, selectedContacts: $selectedContacts).navigationTitle("Contact Picker")
+                            chooseItems(myContacts: myContacts, selectedContacts: $selectedContacts, selectedContactsDict: $selectedContactsDict).navigationTitle("Contact Picker")
                         }, label: {
                             HStack{
                                 Text("Selected Contacts")
                                 Spacer()
-                                Image(systemName: "\(selectedContacts.count).circle")
+                                Image(systemName: "\(selectedContactsDict.count).circle")
                                     .foregroundColor(Color.red)
                                     .font(.title2)
                             }
@@ -54,10 +57,20 @@ struct nicksView: View {
                     
                     // Display the contacts chosen
                     Section("Selected Contacts", content: {
-                        if (selectedContacts.count == 0){
+                        if (selectedContactsDict.count == 0){
                             Text("Nothing Selected Yet").font(.callout)
                         } else {
-                            Text(selectedContacts.joined(separator: "\n"))
+                            ForEach(selectedContactsDict.keys.sorted(), id: \.self){
+                                contact in
+                                HStack{
+                                    Image(systemName: "person.crop.circle").foregroundColor(.red).imageScale(.large)
+                                    Text(contact)
+                                }
+                                
+                            }
+                            //                                Text(selectedContactsDict.keys.sorted().joined(separator: "\n"))
+                            
+                            
                         }
                         
                     })
@@ -80,12 +93,28 @@ struct nicksView: View {
                         Text("Send Responce")
                     }
                     .sheet(isPresented: self.$isShowingMessages){
-                        MessageUIView(recipients: $selectedContacts, selectedGridItem: $selectedGridItem, completion: handleCompletion(_:))
+                        // convert array of contact to array of phone nummbers
+                        
+                        
+                        MessageUIView(recipients: $selectedContacts, location: $location, selectedGridItem: $selectedGridItem, selectedContactDict: $selectedContactsDict, completion: handleCompletion(_:))
                     }
                     .foregroundColor(.red)
                     .font(.body.bold())
                     
-                }.navigationTitle("Help Request")
+                }
+                .navigationTitle("Help Request")
+                .toolbar {
+                    Button(action:{
+                        viewModel.signOut()
+                    }, label: {
+                        HStack{
+                            Image(systemName: "circle.circle").foregroundColor(.red)
+                        }
+                       
+                        
+                    })
+                    .environmentObject(viewModel)
+                }
             }
             
         }
@@ -141,24 +170,33 @@ struct chooseItems: View {
     @State var myContacts:[String:Int]
     
     @Binding var selectedContacts: [String]
+    @Binding var selectedContactsDict: [String:String]
     
     var body: some View {
         Form {
             List {
                 ForEach(myContacts.keys.sorted(), id: \.self){
-                    item in Button(action: {
+                    contact in
+                    
+                    
+                    Button(action: {
                         withAnimation {
-                            if self.selectedContacts.contains(item){
-                                self.selectedContacts.removeAll(where: { $0 == item})
+                            if self.selectedContactsDict[contact] == nil { // if contact(key) is not in dictionary
+//                                self.selectedContacts.append(contact)
+                                self.selectedContactsDict[contact] = String(myContacts[contact]!)
+                                print(selectedContactsDict)
                             } else {
-                                self.selectedContacts.append(item)
+//                                self.selectedContacts.removeAll(where: { $0 == contact})
+                                self.selectedContactsDict.removeValue(forKey: contact)
+                                print(selectedContactsDict)
                             }
                         }
                     }){
                         HStack{
                             Image(systemName: "checkmark")
-                                .opacity(self.selectedContacts.contains(item) ? 1.0 : 0.0)
-                            Text(item)
+//                                .opacity(self.selectedContacts.contains(contact) ? 1.0 : 0.0)
+                                .opacity(self.selectedContactsDict[contact] != nil ? 1.0 : 0.0)
+                            Text(contact)
                         }
                     }
                 }

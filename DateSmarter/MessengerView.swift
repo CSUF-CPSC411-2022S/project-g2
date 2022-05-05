@@ -19,7 +19,6 @@ class MessagesViewController: UIViewController, MFMessageComposeViewControllerDe
     var recipients: [String]?
     var body: String?
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,10 +49,11 @@ class MessagesViewController: UIViewController, MFMessageComposeViewControllerDe
 
 struct MessageUIView: UIViewControllerRepresentable{
     @Environment(\.presentationMode) var presentationMode
-
     @Binding var recipients: [String]
 //    @Binding var body: String
+    @Binding var location: Bool
     @Binding var selectedGridItem: [messageButton]
+    @Binding var selectedContactDict: [String:String]
     
     var completion: ((_ result: MessageComposeResult) -> Void)
 
@@ -64,14 +64,26 @@ struct MessageUIView: UIViewControllerRepresentable{
     func makeUIViewController(context: Context) ->  MessagesViewController {
         let controller = MessagesViewController()
         controller.delegate = context.coordinator
-        controller.recipients = recipients
-        controller.body = selectedGridItem[0].body
+//        controller.recipients = recipients
+        let numbers = selectedContactDict.values.sorted()
+        let test_string = "test string"
+        print("Numbers:",  numbers)
+        controller.recipients = numbers
+        if !location { // if user does not want to include there location in message body
+            print(location)
+            controller.body = selectedGridItem[0].body
+        } else { // get location from API and concatinate it to message body
+            print(location)
+            controller.body = test_string
+        }
+        
         
         return controller
     }
 
     func updateUIViewController(_ uiViewController:  MessagesViewController, context: Context) {
-        uiViewController.recipients = recipients
+        let numbers = selectedContactDict.values.sorted()
+        uiViewController.recipients = numbers
         uiViewController.displayMessageInterface()
     }
 
