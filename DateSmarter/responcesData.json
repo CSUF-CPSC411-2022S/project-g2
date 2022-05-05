@@ -1,0 +1,22 @@
+[
+    {
+    "label":"On a Bad Date",
+    "body":"Can you please call me? I need to get out of this bad date",
+    "icon":"person.2.circle"
+},
+    {
+    "label":"Being Followed",
+    "body":"I am being followed. Please call me ASAP.",
+    "icon":"eye.circle"
+},
+    {
+    "label":"Feeling \n Trapped",
+    "body":"I am with someone that is making feel trapped. Please call me.",
+    "icon":"dot.square"
+},
+    {
+    "label":"Drugged \n",
+    "body":"I think I was drugged. Please call me.",
+    "icon":"pills.circle"
+}
+]

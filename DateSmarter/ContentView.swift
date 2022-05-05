@@ -6,57 +6,53 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct ContentView: View {
-    @State var NumberToMessage = ""
-    @State var Message = ""
     
+//    @State var result: Result<MessageComposeResult, Error>? = nil
+//    @State var isShowingMailView = false
     
+    @EnvironmentObject var viewModel: AppViewModel
+    init(){
+        UINavigationBar.setAnimationsEnabled(true)
+    }
+    @State private var selection = 0
     var body: some View {
-        VStack{
-            HStack{
-                Spacer()
-                Button("Im on a bad date") {
-                    sendMessage()
+        
+        TabView(selection: $selection){
+            if viewModel.signedIn {
+                NavigationView{
+                    nicksView(models: Model())
                 }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I feel trapped") {
-                    sendMessage()
+                .tabItem(){
+                    Image(systemName: "message.circle.fill")
+                    Text("Help Request")
                 }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
+                .tag(0)
+                NavigationView{
+                    minhsView()
+                }
+                .tabItem(){
+                    Image(systemName: "newspaper.circle.fill").imageScale(.large)
+                    Text("Saftey Tips")
+                }
+                .tag(1)
+            }
+            else {
+                NavigationView{
+                    authenticationView()
+                }
                 
             }
-            HStack{
-                Spacer()
-                Button("I'm being followed") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                Button("I've been drugged") {
-                    sendMessage()
-                }
-                .modifier(DateSmarter.buttonStyle())
-                Spacer()
-                
-                
-            }
-//            TextField("Enter A Mobile Number: ", text: $NumberToMessage)
-//            TextField("Enter Your Message", text: $Message)
-            
         }
+        .onAppear {
+            viewModel.signedIn = viewModel.isSignedIn
+        }
+        
     }
     
-    func sendMessage(){
-        let sms: String = "sms:+19095393310&body=I'm being followed please FaceTime. me. I am at <LocationFunction()>"
-        
-        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
-    }
+    
 }
 
 
@@ -65,16 +61,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
-
-struct buttonStyle: ViewModifier {
-   func body(content: Content) -> some View {
-        content
-           .padding()
-           .accentColor(.white)
-           .background(Color.accentColor)
-           .clipShape(RoundedRectangle(cornerRadius: 14.0, style: .continuous))
-   }
 }
 
 
