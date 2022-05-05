@@ -13,7 +13,6 @@ struct Contacts: View {
     @State var name: String = "Testing"
     var body: some View {
 
-        NavigationView {
             List {
                 Section(
                     header: Text("Favorites")) {
@@ -30,7 +29,7 @@ struct Contacts: View {
                             leading: EditButton(),
                             trailing: AddButton)
                         .foregroundColor(Color.blue)
-            }
+            
     }
                                             
                                             

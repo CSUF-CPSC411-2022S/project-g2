@@ -6,50 +6,53 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct ContentView: View {
-//    @StateObject var users = logIn()
-//    @SceneStorage("USERNAME") var USERNAME = "" // data persistence
-//    //    @State var USERNAME = ""
-//
-//    // For Password Field
-//    @FocusState var focus1: Bool
-//    @FocusState var focus2: Bool
-//    @State var showPassword: Bool = false
-//    @State var PASSWORD = ""
-//
-//    @State private var SWITCH = false
-//    @State private var showingAlert = false
+    
+//    @State var result: Result<MessageComposeResult, Error>? = nil
+//    @State var isShowingMailView = false
     
     @EnvironmentObject var viewModel: AppViewModel
-    
+    init(){
+        UINavigationBar.setAnimationsEnabled(true)
+    }
+    @State private var selection = 0
     var body: some View {
-        NavigationView{
+        
+        TabView(selection: $selection){
             if viewModel.signedIn {
-                
-                VStack{
-                    Text("You are signed in")
-                    
-                    
-                    Button(action: {
-                        viewModel.signOut()
-                    }, label: {
-                        Text("Sign Out")
-                            .foregroundColor(Color.red)
-                    })
+                NavigationView{
+                    nicksView(models: Model())
+                }
+                .tabItem(){
+                    Image(systemName: "message.circle.fill")
+                    Text("Help Request")
+                }
+                .tag(0)
+                NavigationView{
+                    minhsView()
+                }
+                .tabItem(){
+                    Image(systemName: "newspaper.circle.fill").imageScale(.large)
+                    Text("Saftey Tips")
+                }
+                .tag(1)
+            }
+            else {
+                NavigationView{
+                    authenticationView()
                 }
                 
             }
-            else {
-                authenticationView()
-            }
         }
-        .navigationViewStyle(.stack)
         .onAppear {
             viewModel.signedIn = viewModel.isSignedIn
         }
         
     }
+    
+    
 }
 
 
@@ -61,73 +64,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-//struct LOGO: View {
-//    var body: some View{
-//        return Image("DateSafeSmallBlack")
-//
-//    }
-//}
 
-//NavigationView{
-//    VStack{
-//        LOGO()
-//            .frame(width: 150, height: 150)
-//
-//        TextField("Username", text: $USERNAME)
-//            .modifier(textFields())
-//
-//        HStack {
-//            ZStack(alignment: .trailing) {
-//                TextField("Password", text: $PASSWORD)
-//                    .modifier(textFields())
-//                    .focused($focus1)
-//                    .opacity(showPassword ? 1 : 0)
-//                SecureField("Password", text: $PASSWORD)
-//                    .modifier(textFields())
-//                    .focused($focus2)
-//                    .opacity(showPassword ? 0 : 1)
-//                Button(action: {
-//                    showPassword.toggle()
-//                    if showPassword { focus1 = true } else { focus2 = true }
-//                }, label: {
-//                    Image(systemName: self.showPassword ? "eye.slash.fill" : "eye.fill").font(.system(size: 16, weight: .regular))
-//                        .padding()
-//                })
-//            }
-//        }
-//
-//
-//
-//
-//        Button("LOG IN") {
-//            if (users.checkUser(name: USERNAME, password: PASSWORD)){
-//                SWITCH = true;
-//            }else{
-//                showingAlert = true
-//            }
-//        }
-//        .alert("Username or password is invalid. Please try again.", isPresented: $showingAlert) {
-//            Button("OK", role: .cancel) { }
-//        }
-//        .modifier(buttonMod())
-//
-//
-//        NavigationLink(
-//            "User is Valid",
-//            destination: inAppView().navigationBarBackButtonHidden(true).navigationBarHidden(true),
-//            isActive: $SWITCH
-//
-//        )
-//        .background(.white)
-//        .foregroundColor(.white)
-//        .disabled(true)
-//
-//
-//        // insert navigation link to create an account
-//        NavigationLink(
-//            "Register",
-//            destination: registerView().navigationBarBackButtonHidden(false).navigationBarHidden(false)
-//        )
-//    }
-//
-//}.environmentObject(users)
