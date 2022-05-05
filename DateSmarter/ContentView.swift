@@ -10,8 +10,9 @@ import MessageUI
 
 struct ContentView: View {
     
-//    @State var result: Result<MessageComposeResult, Error>? = nil
-//    @State var isShowingMailView = false
+
+    // location tracking
+    
     
     @EnvironmentObject var viewModel: AppViewModel
     init(){

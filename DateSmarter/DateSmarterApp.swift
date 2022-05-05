@@ -11,13 +11,14 @@ import SwiftUI
 
 @main
 struct DateSmarterApp: App {
-    
+    @StateObject var finder = LocationTracking()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             let viewModel = AppViewModel()
             ContentView()
                 .environmentObject(viewModel)
+                .environmentObject(finder)
         }
     }
 }
