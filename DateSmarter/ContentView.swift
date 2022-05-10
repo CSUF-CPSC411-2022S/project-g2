@@ -39,6 +39,14 @@ struct ContentView: View {
                     Text("Saftey Tips")
                 }
                 .tag(1)
+                NavigationView{
+                    JContentView()
+                }
+                .tabItem(){
+                    Image(systemName: "exclamationmark.circle.fill").imageScale(.large)
+                    Text("SOS Button")
+                }
+                .tag(2)
             }
             else {
                 NavigationView{
