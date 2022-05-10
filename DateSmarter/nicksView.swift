@@ -15,16 +15,17 @@ struct nicksView: View {
     @State var selectedContactsDict = [String: String]()
     @State var myContacts:[String:Int] = [
         "Nicholas Caro": 6266226475,
-        "Wangmo Tezin": 9093784523,
+        "Wangmo Tenzing": 9093784523,
         "Jeein Kim": 6269054065,
         "Minh Nguyen": 9093216756
     ]
     // create a state object
     @StateObject var models = Model()
-    
+    @State var stringVar: String = ""
     @State var selectedGridItem: [messageButton] = []
     
     @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var finder: LocationTracking
     
     var rows: [GridItem] {
         Array(repeating: .init(.fixed(120)), count: 1)
@@ -89,12 +90,12 @@ struct nicksView: View {
                     // Button that opens iMessage UI
                     Button {
                         self.isShowingMessages.toggle()
+                 
                     } label: {
                         Text("Send Responce")
                     }
                     .sheet(isPresented: self.$isShowingMessages){
                         // convert array of contact to array of phone nummbers
-                        
                         
                         MessageUIView(recipients: $selectedContacts, location: $location, selectedGridItem: $selectedGridItem, selectedContactDict: $selectedContactsDict, completion: handleCompletion(_:))
                     }
@@ -108,7 +109,7 @@ struct nicksView: View {
                         viewModel.signOut()
                     }, label: {
                         HStack{
-                            Image(systemName: "circle.circle").foregroundColor(.red)
+                            Image(systemName: "return").foregroundColor(.red)
                         }
                        
                         
@@ -201,6 +202,25 @@ struct chooseItems: View {
                     }
                 }
             }
+        }
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing){
+                // Delete Button
+                Button(action:{
+                  // view to delete a contact
+                }, label: {
+                    Image(systemName: "person.crop.circle.badge.minus").foregroundColor(.red)
+                })
+                
+                Spacer()
+                
+                Button(action:{
+                  // view to add contact
+                }, label: {
+                    Image(systemName: "person.crop.circle.badge.plus").foregroundColor(.green)
+                })
+            }
+
         }
     }
 }

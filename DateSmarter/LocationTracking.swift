@@ -38,66 +38,46 @@ class LocationTracking: ObservableObject {
     @Published var translatedCity = ""
     @Published var translatedZip = ""
     
-    
-    func find(_ searchString: String) {
-        guard searchString != "w" else {
-            return
-        }
-        
-        print("hello?")
-        
+    func find() -> String {
+//    closure: @escaping (String) -> Void
+      
+//        print("hello?")
         let ipUrl = "http://ip-api.com/json/"
-        
         //addingPercentEncoding()
         if let urlString = ipUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed),
            let url = URL(string: urlString) {
-            
-            print("hello2?")
-            
-        
+//            print("hello2?")
             // Creates a task that retrieves the contents of the specified URL, then calls a handler upon completion.
                 let task = URLSession.shared.dataTask(with: url) {
                     data, response, error in
-                    
-                    print("hello3?")
-            
+//                    print("hello3?")
                     DispatchQueue.main.async {
                         let jsonDecoder = JSONDecoder()
-                        
-                        print("hello4?")
-                        
+//                        print("hello4?")
                         //convert data into string
-                        print(data)
-                        
-                        print("Below will print out whole string received back from the API:")
-                        
-                        print(String(decoding:data!, as: UTF8.self))
-                
+//                        print(data)
+//                        print("Below will print out whole string received back from the API:")
+//                        print(String(decoding:data!, as: UTF8.self))
                         // Decode the JSON and store in result
                         if let validData = data, let result = try? jsonDecoder.decode(Response.self, from: validData) {
-                          
-                            print("hello5?")
-                            
+//                            print("hello5?")
                             if result.query != " " {
                                 self.translatedQuery = result.query
-                                
-                                print("hello6?")
-                                
+//                                print("hello6?")
                                 self.translatedCountry = result.country
                                 self.translatedRegion = result.region
                                 self.translatedRegionName = result.regionName
                                 self.translatedCity = result.city
                                 self.translatedZip = result.zip
-                                
-                                print(self.translatedCity)
-                                print(self.translatedCountry)
-                                print(self.translatedZip)
-                                print(self.translatedRegionName)
-                                print(self.translatedRegion)
+//                                print(self.translatedCity)
+//                                print(self.translatedCountry)
+//                                print(self.translatedZip)
+//                                print(self.translatedRegionName)
+//                                print(self.translatedRegion)
                                 
                             }//if
                             else {
-                                self.translatedQuery = "No results found."
+                            self.translatedQuery = "No results found."
                             }
                             
                         }//if
@@ -108,6 +88,9 @@ class LocationTracking: ObservableObject {
                 }// let task = ...
             task.resume()
         }//let url = URL(string: urlString)
+//        let text = "I am using Date Safer to send you my current location \(self.translatedCity)"
+        return self.translatedCountry
+//        return "I am using Date Safer to send you my current location \(self.translatedCity), \(self.translatedCountry), \(self.translatedZip), \(self.translatedRegionName), My coordinates: \(self.translatedQuery)"
     }//find func
 }//class LocationTracking
 

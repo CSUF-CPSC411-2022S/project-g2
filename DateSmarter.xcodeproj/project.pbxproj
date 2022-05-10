@@ -30,12 +30,10 @@
 		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
-
+		A0B711D3282A062D004A732A /* minhsEduTextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B711D2282A062C004A732A /* minhsEduTextModifiers.swift */; };
 		A333B97A27DAA47300F22875 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B97927DAA47300F22875 /* LocationTracking.swift */; };
 		A333B97C27DAA7FF00F22875 /* LocationTrackingUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */; };
-
 		EBB348AD1DFD7248278F1C7F /* Pods_DateSmarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062F9D59CD409A06A576F07E /* Pods_DateSmarter.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,16 +78,15 @@
 		A086C09C27D9B15300F06AAA /* DateSmarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSmarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-
-		A333B97927DAA47300F22875 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
-		A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingUnitTests.swift; sourceTree = "<group>"; };
-
 		A09EDB8127E8311F0037F6AC /* loggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingIn.swift; sourceTree = "<group>"; };
 		A09EDB8927E832370037F6AC /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
 		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
 		A09EDB8F27E833C10037F6AC /* popInNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popInNotification.swift; sourceTree = "<group>"; };
+		A0A12E6F28246DD30044999F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0B711D2282A062C004A732A /* minhsEduTextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minhsEduTextModifiers.swift; sourceTree = "<group>"; };
+		A333B97927DAA47300F22875 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
+		A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTrackingUnitTests.swift; sourceTree = "<group>"; };
 		E97FFA28EBD4020E91711011 /* Pods-DateSmarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateSmarter.release.xcconfig"; path = "Target Support Files/Pods-DateSmarter/Pods-DateSmarter.release.xcconfig"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +130,7 @@
 				7AF1A41C27ED1187003710F0 /* minhsEduText.swift */,
 				7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */,
 				7AF1A41E27ED1187003710F0 /* minhsView.swift */,
+				A0B711D2282A062C004A732A /* minhsEduTextModifiers.swift */,
 			);
 			path = classes_views_Minh;
 			sourceTree = "<group>";
@@ -179,6 +177,7 @@
 		A086C08427D9B15100F06AAA /* DateSmarter */ = {
 			isa = PBXGroup;
 			children = (
+				A0A12E6F28246DD30044999F /* Info.plist */,
 				A0566EA92804FD2900C62E4C /* GoogleService-Info.plist */,
 				A086C08727D9B15100F06AAA /* ContentView.swift */,
 				A073FD8328221DE600235529 /* responcesData.json */,
@@ -434,13 +433,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				A086C08827D9B15100F06AAA /* ContentView.swift in Sources */,
 				A333B97A27DAA47300F22875 /* LocationTracking.swift in Sources */,
-				A086C08627D9B15100F06AAA /* DateSmarterApp.swift in Sources */,
-
 				A073FD872822386200235529 /* ContentView.swift in Sources */,
 				A073FD882822386200235529 /* responcesData.json in Sources */,
+				A0B711D3282A062D004A732A /* minhsEduTextModifiers.swift in Sources */,
 				A073FD892822386200235529 /* contac_Jeein.swift in Sources */,
 				A073FD8A2822386200235529 /* views_Jeein.swift in Sources */,
 				A073FD8B2822386200235529 /* DateSmarterApp.swift in Sources */,
@@ -456,7 +452,6 @@
 				A073FD962822386200235529 /* minhsEduText.swift in Sources */,
 				A073FD972822386200235529 /* minhsModifiers.swift in Sources */,
 				A073FD982822386200235529 /* minhsView.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +617,7 @@
 				DEVELOPMENT_TEAM = 3F97ZK7ZQ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DateSmarter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -652,6 +648,7 @@
 				DEVELOPMENT_TEAM = 3F97ZK7ZQ7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DateSmarter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
