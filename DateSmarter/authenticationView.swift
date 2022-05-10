@@ -58,12 +58,21 @@ struct authenticationView: View {
     @State private var showingAlert = false
     
     @EnvironmentObject var viewModel: AppViewModel
+    var SOS_US = "911"
     var body: some View {
         VStack{
-            Image("Date (1)")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
+            // make logo a button that can call 911
+            Button(action: {
+                let cell = "tel://"
+                let cellNumFormat = cell + SOS_US
+                guard let url = URL(string: cellNumFormat) else {return}
+                UIApplication.shared.open(url)
+            }, label: {
+                Image("Date (1)")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+            })
             VStack{
                 TextField("Email Address", text: $email)
                     .disableAutocorrection(true)
@@ -94,6 +103,7 @@ struct authenticationView: View {
                 NavigationLink("Create Account") {
                     signUpView()
                 }
+                .foregroundColor(.red)
                 .padding()
             }
             .padding()
