@@ -66,24 +66,35 @@ struct MessageUIView: UIViewControllerRepresentable{
     }
 
     func makeUIViewController(context: Context) ->  MessagesViewController {
-        print(finder.find())
+        let intro_string = "I used the Date Smarter App to send this message."
         let controller = MessagesViewController()
         controller.delegate = context.coordinator
 //        controller.recipients = recipients
+        print("Message Auth View")
+//        print(finder.translatedCity)
+        let location_string = ". This is my location: \(finder.translatedCity), \(finder.translatedZip) \(finder.translatedCountry)"
         let numbers = selectedContactDict.values.sorted()
         print("Numbers:",  numbers)
         controller.recipients = numbers
-        controller.body = selectedGridItem[0].body
-
-        
-        
+        if (location){
+            controller.body = intro_string + " " + selectedGridItem[0].body + location_string
+        } else {
+            controller.body = intro_string + " " + selectedGridItem[0].body
+        }
         return controller
     }
 
     func updateUIViewController(_ uiViewController:  MessagesViewController, context: Context) {
+        let intro_string = "I used the Date Smarter App to send this message."
+        let location_string = ". This is my location: \(finder.translatedCity), \(finder.translatedZip) \(finder.translatedCountry)"
         let numbers = selectedContactDict.values.sorted()
         uiViewController.recipients = numbers
-        uiViewController.body = selectedGridItem[0].body
+//        uiViewController.body = selectedGridItem[0].body
+        if (location){
+            uiViewController.body = intro_string + " " + selectedGridItem[0].body + location_string
+        } else {
+            uiViewController.body = intro_string + selectedGridItem[0].body
+        }
         uiViewController.displayMessageInterface()
     }
 

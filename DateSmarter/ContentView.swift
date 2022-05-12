@@ -47,6 +47,7 @@ struct ContentView: View {
                     Text("SOS Button")
                 }
                 .tag(2)
+                
             }
             else {
                 NavigationView{

@@ -38,29 +38,29 @@ class LocationTracking: ObservableObject {
     @Published var translatedCity = ""
     @Published var translatedZip = ""
     
-    func find() -> String {
+    func find() -> Void {
 //    closure: @escaping (String) -> Void
       
-//        print("hello?")
+        print("hello?")
         let ipUrl = "http://ip-api.com/json/"
         //addingPercentEncoding()
         if let urlString = ipUrl.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed),
            let url = URL(string: urlString) {
-//            print("hello2?")
+            print("hello2?")
             // Creates a task that retrieves the contents of the specified URL, then calls a handler upon completion.
                 let task = URLSession.shared.dataTask(with: url) {
                     data, response, error in
-//                    print("hello3?")
-                    DispatchQueue.main.async {
+                    print("hello3?")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         let jsonDecoder = JSONDecoder()
-//                        print("hello4?")
+                        print("hello4?")
                         //convert data into string
 //                        print(data)
 //                        print("Below will print out whole string received back from the API:")
 //                        print(String(decoding:data!, as: UTF8.self))
                         // Decode the JSON and store in result
                         if let validData = data, let result = try? jsonDecoder.decode(Response.self, from: validData) {
-//                            print("hello5?")
+                            print("hello5?")
                             if result.query != " " {
                                 self.translatedQuery = result.query
 //                                print("hello6?")
@@ -86,11 +86,13 @@ class LocationTracking: ObservableObject {
                         }//else
                     }//DispatchQueue
                 }// let task = ...
+            
             task.resume()
+            print("print 6")
+//            return self.translatedCountry
         }//let url = URL(string: urlString)
-//        let text = "I am using Date Safer to send you my current location \(self.translatedCity)"
-        return self.translatedCountry
-//        return "I am using Date Safer to send you my current location \(self.translatedCity), \(self.translatedCountry), \(self.translatedZip), \(self.translatedRegionName), My coordinates: \(self.translatedQuery)"
+//        return self.translatedCountry
+//        return ""
     }//find func
 }//class LocationTracking
 
