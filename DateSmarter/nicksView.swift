@@ -8,6 +8,45 @@
 import SwiftUI
 import MessageUI
 
+struct ContactItem {
+    let name: String
+    let phone_number: Int
+}
+
+class Expenses: ObservableObject{
+    @Published var items = [ContactItem]()
+}
+
+struct ContactView: View{
+    @StateObject var expenses = Expenses()
+    
+    var body: some View{
+        List{
+            ForEach(expenses.items, id: \.name) { item in
+                HStack{
+                    Text(item.name)
+                    Text(String(item.phone_number))
+                }
+                
+            }
+            .onDelete(perform: removeItems)
+        }
+        .navigationTitle("Contact Selecter")
+        .toolbar {
+            Button(action: {
+                let expense = ContactItem(name: "Test", phone_number: 2132805798)
+                expenses.items.append(expense)
+            }, label: {
+                Image(systemName: "plus")
+            })
+        }
+    }
+    
+    func removeItems(at offsets: IndexSet){
+        expenses.items.remove(atOffsets: offsets)
+    }
+}
+
 struct nicksView: View {
     @State private var isShowingMessages = false
     @State var location: Bool = false
@@ -26,7 +65,6 @@ struct nicksView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject var finder: LocationTracking
-    
     var rows: [GridItem] {
         Array(repeating: .init(.fixed(120)), count: 1)
     }
@@ -39,6 +77,10 @@ struct nicksView: View {
                     Section(header: Text("Location Sender"), footer: location ? Text("Location sender on.") : Text("Location sender off.")){
                         
                         Toggle("location", isOn: $location)
+                            .onChange(of: location){ value in
+                                finder.find()
+                                print("toggle checker")
+                            }
                             .labelsHidden()
                             .tint(.red)
                     }
@@ -123,6 +165,9 @@ struct nicksView: View {
         
     }
     
+    func callFinder() -> Void{
+        finder.find()
+    }
     func load<T: Decodable>(_ filename: String) -> T {
         let data: Data
 
