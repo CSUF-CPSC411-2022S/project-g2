@@ -18,7 +18,8 @@ System Requirements:
 
     $ pod install 
     
-    (ATS_Settings.png)
+   
+    ![alt text](ATS_Settings.png)
 
 
 
