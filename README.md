@@ -1,4 +1,4 @@
-# project-g2
+# Date Smarter 
 project-g2 created by GitHub Classroom
 
 System Requirements: 
