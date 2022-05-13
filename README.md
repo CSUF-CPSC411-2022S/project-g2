@@ -25,6 +25,8 @@ System Requirements:
       Then add "Allow Arbitrary Loads." 
       Then under that, add "Exception Domains," and below that add "com.ip-api"
       Make sure the heirarchy of the settings match--i.e. "com.ip-api" goes under the "Exception Domains," which go under "App Transport Security Settings."
+      
+      ![alt text](ATS_Settings.png)
     
    
     
