@@ -17,6 +17,8 @@ System Requirements:
   - Save the file and run: 
 
     $ pod install 
+    
+    (ATS_Settings.png)
 
 
 
