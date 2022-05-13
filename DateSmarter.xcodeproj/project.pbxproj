@@ -16,18 +16,13 @@
 		A073FD8C2822386200235529 /* viewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8927E832370037F6AC /* viewModifiers.swift */; };
 		A073FD8D2822386200235529 /* nicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8D27E833030037F6AC /* nicksView.swift */; };
 		A073FD8E2822386200235529 /* newGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0437EE9281F8AE3009FE463 /* newGridView.swift */; };
-		A073FD8F2822386200235529 /* contactSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079586227FE867D00337920 /* contactSelection.swift */; };
 		A073FD902822386200235529 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */; };
 		A073FD922822386200235529 /* authenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011C19E2804F45A00950000 /* authenticationView.swift */; };
-		A073FD932822386200235529 /* loggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8127E8311F0037F6AC /* loggingIn.swift */; };
-		A073FD942822386200235529 /* popInNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09EDB8F27E833C10037F6AC /* popInNotification.swift */; };
-		A073FD952822386200235529 /* authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079585E27FE6E4200337920 /* authentication.swift */; };
 		A073FD962822386200235529 /* minhsEduText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41C27ED1187003710F0 /* minhsEduText.swift */; };
 		A073FD972822386200235529 /* minhsModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41D27ED1187003710F0 /* minhsModifiers.swift */; };
 		A073FD982822386200235529 /* minhsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1A41E27ED1187003710F0 /* minhsView.swift */; };
 		A086C08A27D9B15300F06AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08927D9B15300F06AAA /* Assets.xcassets */; };
 		A086C08D27D9B15300F06AAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A086C08C27D9B15300F06AAA /* Preview Assets.xcassets */; };
-		A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C09627D9B15300F06AAA /* DateSmarterTests.swift */; };
 		A086C0A127D9B15300F06AAA /* DateSmarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */; };
 		A086C0A327D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */; };
 		A0B711D3282A062D004A732A /* minhsEduTextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B711D2282A062C004A732A /* minhsEduTextModifiers.swift */; };
@@ -66,22 +61,17 @@
 		A063B92127ED14E0002DB528 /* contac_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contac_Jeein.swift; sourceTree = "<group>"; };
 		A063B92327ED1502002DB528 /* views_Jeein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = views_Jeein.swift; sourceTree = "<group>"; };
 		A073FD8328221DE600235529 /* responcesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = responcesData.json; sourceTree = "<group>"; };
-		A079585E27FE6E4200337920 /* authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authentication.swift; sourceTree = "<group>"; };
-		A079586227FE867D00337920 /* contactSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactSelection.swift; sourceTree = "<group>"; };
 		A086C08227D9B15100F06AAA /* DateSmarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateSmarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C08527D9B15100F06AAA /* DateSmarterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterApp.swift; sourceTree = "<group>"; };
 		A086C08727D9B15100F06AAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A086C08927D9B15300F06AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A086C08C27D9B15300F06AAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A086C09227D9B15300F06AAA /* DateSmarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSmarterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A086C09627D9B15300F06AAA /* DateSmarterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterTests.swift; sourceTree = "<group>"; };
 		A086C09C27D9B15300F06AAA /* DateSmarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateSmarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A086C0A027D9B15300F06AAA /* DateSmarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITests.swift; sourceTree = "<group>"; };
 		A086C0A227D9B15300F06AAA /* DateSmarterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSmarterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A09EDB8127E8311F0037F6AC /* loggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loggingIn.swift; sourceTree = "<group>"; };
 		A09EDB8927E832370037F6AC /* viewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModifiers.swift; sourceTree = "<group>"; };
 		A09EDB8D27E833030037F6AC /* nicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicksView.swift; sourceTree = "<group>"; };
-		A09EDB8F27E833C10037F6AC /* popInNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popInNotification.swift; sourceTree = "<group>"; };
 		A0A12E6F28246DD30044999F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A0B711D2282A062C004A732A /* minhsEduTextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minhsEduTextModifiers.swift; sourceTree = "<group>"; };
 		A333B97927DAA47300F22875 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
@@ -205,7 +195,6 @@
 		A086C09527D9B15300F06AAA /* DateSmarterTests */ = {
 			isa = PBXGroup;
 			children = (
-				A086C09627D9B15300F06AAA /* DateSmarterTests.swift */,
 				A333B97B27DAA7FF00F22875 /* LocationTrackingUnitTests.swift */,
 			);
 			path = DateSmarterTests;
@@ -223,9 +212,6 @@
 		A09EDB8327E8315C0037F6AC /* classes_Nick */ = {
 			isa = PBXGroup;
 			children = (
-				A09EDB8127E8311F0037F6AC /* loggingIn.swift */,
-				A09EDB8F27E833C10037F6AC /* popInNotification.swift */,
-				A079585E27FE6E4200337920 /* authentication.swift */,
 			);
 			path = classes_Nick;
 			sourceTree = "<group>";
@@ -235,7 +221,6 @@
 			children = (
 				A09EDB8D27E833030037F6AC /* nicksView.swift */,
 				A0437EE9281F8AE3009FE463 /* newGridView.swift */,
-				A079586227FE867D00337920 /* contactSelection.swift */,
 				A03BF3EF281CCEE3004D6F58 /* MessengerView.swift */,
 				A011C19E2804F45A00950000 /* authenticationView.swift */,
 			);
@@ -443,12 +428,8 @@
 				A073FD8C2822386200235529 /* viewModifiers.swift in Sources */,
 				A073FD8D2822386200235529 /* nicksView.swift in Sources */,
 				A073FD8E2822386200235529 /* newGridView.swift in Sources */,
-				A073FD8F2822386200235529 /* contactSelection.swift in Sources */,
 				A073FD902822386200235529 /* MessengerView.swift in Sources */,
 				A073FD922822386200235529 /* authenticationView.swift in Sources */,
-				A073FD932822386200235529 /* loggingIn.swift in Sources */,
-				A073FD942822386200235529 /* popInNotification.swift in Sources */,
-				A073FD952822386200235529 /* authentication.swift in Sources */,
 				A073FD962822386200235529 /* minhsEduText.swift in Sources */,
 				A073FD972822386200235529 /* minhsModifiers.swift in Sources */,
 				A073FD982822386200235529 /* minhsView.swift in Sources */,
@@ -459,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A086C09727D9B15300F06AAA /* DateSmarterTests.swift in Sources */,
 				A333B97C27DAA7FF00F22875 /* LocationTrackingUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
