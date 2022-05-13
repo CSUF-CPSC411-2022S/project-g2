@@ -18,6 +18,9 @@ System Requirements:
 
     $ pod install 
     
+    Running the API:
+      Below are the settings needed for the API call to work. This is because the API we're using is HTTP, not HTTPS so the App Transport Security blocks       the unsecure connection, but making these changes below will allow the call to go through.
+    
    
     ![alt text](ATS_Settings.png)
 
